@@ -12,4 +12,10 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  nitro: {
+    // Pin to netlify preset so output lands in dist/client (static) +
+    // .netlify/functions/server (SSR handler). NITRO_PRESET env var in
+    // netlify.toml also sets this — having both is safe and explicit.
+    preset: "netlify",
+  },
 });
