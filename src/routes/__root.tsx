@@ -96,7 +96,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
           "Community-led mangrove restoration, waste recovery, and urban resilience programs since 2018.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:image", content: "/Big%20Ship%20Logo.jpg" },
+      { property: "og:url", content: "https://big-ship-org.netlify.app" },
+      { property: "og:image", content: "https://big-ship-org.netlify.app/big-ship-logo.png" },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:image:type", content: "image/png" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Big Ship C.B.O. | Environmental Conservation in Mombasa" },
       {
@@ -104,7 +108,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content:
           "Community-led mangrove restoration, waste recovery, and urban resilience programs since 2018.",
       },
-      { name: "twitter:image", content: "/Big%20Ship%20Logo.jpg" },
+      { name: "twitter:image", content: "https://big-ship-org.netlify.app/big-ship-logo.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
