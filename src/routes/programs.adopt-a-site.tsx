@@ -17,14 +17,14 @@ export const Route = createFileRoute("/programs/adopt-a-site")({
         property: "og:description",
         content: "Join our flagship mangrove restoration program with ecosystem monitoring and community leadership.",
       },
-      { property: "og:image", content: "/Big%20Ship%20Logo.jpg" },
+      { property: "og:image", content: "https://big-ship-org.netlify.app/big-ship-logo.png" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Adopt A Site | Big Ship C.B.O." },
       {
         name: "twitter:description",
         content: "Community-led mangrove restoration around Tudor Creek, Mikindani, and Ganahola.",
       },
-      { name: "twitter:image", content: "/Big%20Ship%20Logo.jpg" },
+      { name: "twitter:image", content: "https://big-ship-org.netlify.app/big-ship-logo.png" },
     ],
   }),
   component: () => (

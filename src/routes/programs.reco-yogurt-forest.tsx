@@ -17,14 +17,14 @@ export const Route = createFileRoute("/programs/reco-yogurt-forest")({
         property: "og:description",
         content: "Join our waste recovery initiative transforming yoghurt cups into reforestation seedling containers.",
       },
-      { property: "og:image", content: "/Big%20Ship%20Logo.jpg" },
+      { property: "og:image", content: "https://big-ship-org.netlify.app/big-ship-logo.png" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "RECO/Yogurt Forest | Big Ship C.B.O." },
       {
         name: "twitter:description",
         content: "Waste recovery and environmental education through yoghurt cup recycling.",
       },
-      { name: "twitter:image", content: "/Big%20Ship%20Logo.jpg" },
+      { name: "twitter:image", content: "https://big-ship-org.netlify.app/big-ship-logo.png" },
     ],
   }),
   component: () => (

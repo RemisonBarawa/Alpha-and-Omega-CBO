@@ -17,14 +17,14 @@ export const Route = createFileRoute("/programs/urban-resilience")({
         property: "og:description",
         content: "Skills development, community organizing, and climate resilience training for coastal youth.",
       },
-      { property: "og:image", content: "/Big%20Ship%20Logo.jpg" },
+      { property: "og:image", content: "https://big-ship-org.netlify.app/big-ship-logo.png" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Urban Resilience & Skills | Big Ship C.B.O." },
       {
         name: "twitter:description",
         content: "Youth livelihoods and community resilience training in Mombasa.",
       },
-      { name: "twitter:image", content: "/Big%20Ship%20Logo.jpg" },
+      { name: "twitter:image", content: "https://big-ship-org.netlify.app/big-ship-logo.png" },
     ],
   }),
   component: () => (
