@@ -83,7 +83,7 @@ export function ImpactMetric({
 
       {/* Label row with optional badge */}
       <div className="mt-3 flex flex-wrap items-center gap-2">
-        <p className="text-sm text-muted-foreground leading-snug">{label}</p>
+        <p className="text-sm text-white leading-snug">{label}</p>
         {badgeLabel && badgeColor && (
           <span
             className={cn(
@@ -99,7 +99,7 @@ export function ImpactMetric({
 
       {/* Source attribution */}
       {source && (
-        <p className="mt-1.5 text-[0.68rem] leading-snug text-muted-foreground/70 italic">
+        <p className="mt-1.5 text-[0.68rem] leading-snug text-white/70 italic">
           Source: {source}
         </p>
       )}

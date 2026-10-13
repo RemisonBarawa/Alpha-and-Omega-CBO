@@ -16,9 +16,11 @@ import { Route as ContactRouteImport } from './routes/contact'
 import { Route as EventsRouteImport } from './routes/events'
 import { Route as ImpactRouteImport } from './routes/impact'
 import { Route as ProgramsRouteImport } from './routes/programs'
-import { Route as ProgramsAdoptASiteRouteImport } from './routes/programs.adopt-a-site'
-import { Route as ProgramsRecoYogurtForestRouteImport } from './routes/programs.reco-yogurt-forest'
-import { Route as ProgramsUrbanResilienceRouteImport } from './routes/programs.urban-resilience'
+import { Route as ProgramsClimateActionRouteImport } from './routes/programs.climate-action'
+import { Route as ProgramsGirlChildMentorshipRouteImport } from './routes/programs.girl-child-mentorship'
+import { Route as ProgramsHumanRightsRouteImport } from './routes/programs.human-rights'
+import { Route as ProgramsWomensEmpowermentRouteImport } from './routes/programs.womens-empowerment'
+import { Route as ProgramsYouthVoiceRouteImport } from './routes/programs.youth-voice'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -55,20 +57,31 @@ const ProgramsRoute = ProgramsRouteImport.update({
   path: '/programs',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ProgramsAdoptASiteRoute = ProgramsAdoptASiteRouteImport.update({
-  id: '/adopt-a-site',
-  path: '/adopt-a-site',
+const ProgramsClimateActionRoute = ProgramsClimateActionRouteImport.update({
+  id: '/climate-action',
+  path: '/climate-action',
   getParentRoute: () => ProgramsRoute,
 } as any)
-const ProgramsRecoYogurtForestRoute =
-  ProgramsRecoYogurtForestRouteImport.update({
-    id: '/reco-yogurt-forest',
-    path: '/reco-yogurt-forest',
+const ProgramsGirlChildMentorshipRoute =
+  ProgramsGirlChildMentorshipRouteImport.update({
+    id: '/girl-child-mentorship',
+    path: '/girl-child-mentorship',
     getParentRoute: () => ProgramsRoute,
   } as any)
-const ProgramsUrbanResilienceRoute = ProgramsUrbanResilienceRouteImport.update({
-  id: '/urban-resilience',
-  path: '/urban-resilience',
+const ProgramsHumanRightsRoute = ProgramsHumanRightsRouteImport.update({
+  id: '/human-rights',
+  path: '/human-rights',
+  getParentRoute: () => ProgramsRoute,
+} as any)
+const ProgramsWomensEmpowermentRoute =
+  ProgramsWomensEmpowermentRouteImport.update({
+    id: '/womens-empowerment',
+    path: '/womens-empowerment',
+    getParentRoute: () => ProgramsRoute,
+  } as any)
+const ProgramsYouthVoiceRoute = ProgramsYouthVoiceRouteImport.update({
+  id: '/youth-voice',
+  path: '/youth-voice',
   getParentRoute: () => ProgramsRoute,
 } as any)
 
@@ -80,9 +93,11 @@ export interface FileRoutesByFullPath {
   '/events': typeof EventsRoute
   '/impact': typeof ImpactRoute
   '/programs': typeof ProgramsRouteWithChildren
-  '/programs/adopt-a-site': typeof ProgramsAdoptASiteRoute
-  '/programs/reco-yogurt-forest': typeof ProgramsRecoYogurtForestRoute
-  '/programs/urban-resilience': typeof ProgramsUrbanResilienceRoute
+  '/programs/climate-action': typeof ProgramsClimateActionRoute
+  '/programs/girl-child-mentorship': typeof ProgramsGirlChildMentorshipRoute
+  '/programs/human-rights': typeof ProgramsHumanRightsRoute
+  '/programs/womens-empowerment': typeof ProgramsWomensEmpowermentRoute
+  '/programs/youth-voice': typeof ProgramsYouthVoiceRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -92,9 +107,11 @@ export interface FileRoutesByTo {
   '/events': typeof EventsRoute
   '/impact': typeof ImpactRoute
   '/programs': typeof ProgramsRouteWithChildren
-  '/programs/adopt-a-site': typeof ProgramsAdoptASiteRoute
-  '/programs/reco-yogurt-forest': typeof ProgramsRecoYogurtForestRoute
-  '/programs/urban-resilience': typeof ProgramsUrbanResilienceRoute
+  '/programs/climate-action': typeof ProgramsClimateActionRoute
+  '/programs/girl-child-mentorship': typeof ProgramsGirlChildMentorshipRoute
+  '/programs/human-rights': typeof ProgramsHumanRightsRoute
+  '/programs/womens-empowerment': typeof ProgramsWomensEmpowermentRoute
+  '/programs/youth-voice': typeof ProgramsYouthVoiceRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -105,9 +122,11 @@ export interface FileRoutesById {
   '/events': typeof EventsRoute
   '/impact': typeof ImpactRoute
   '/programs': typeof ProgramsRouteWithChildren
-  '/programs/adopt-a-site': typeof ProgramsAdoptASiteRoute
-  '/programs/reco-yogurt-forest': typeof ProgramsRecoYogurtForestRoute
-  '/programs/urban-resilience': typeof ProgramsUrbanResilienceRoute
+  '/programs/climate-action': typeof ProgramsClimateActionRoute
+  '/programs/girl-child-mentorship': typeof ProgramsGirlChildMentorshipRoute
+  '/programs/human-rights': typeof ProgramsHumanRightsRoute
+  '/programs/womens-empowerment': typeof ProgramsWomensEmpowermentRoute
+  '/programs/youth-voice': typeof ProgramsYouthVoiceRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -119,9 +138,11 @@ export interface FileRouteTypes {
     | '/events'
     | '/impact'
     | '/programs'
-    | '/programs/adopt-a-site'
-    | '/programs/reco-yogurt-forest'
-    | '/programs/urban-resilience'
+    | '/programs/climate-action'
+    | '/programs/girl-child-mentorship'
+    | '/programs/human-rights'
+    | '/programs/womens-empowerment'
+    | '/programs/youth-voice'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
@@ -131,9 +152,11 @@ export interface FileRouteTypes {
     | '/events'
     | '/impact'
     | '/programs'
-    | '/programs/adopt-a-site'
-    | '/programs/reco-yogurt-forest'
-    | '/programs/urban-resilience'
+    | '/programs/climate-action'
+    | '/programs/girl-child-mentorship'
+    | '/programs/human-rights'
+    | '/programs/womens-empowerment'
+    | '/programs/youth-voice'
   id:
     | '__root__'
     | '/'
@@ -143,9 +166,11 @@ export interface FileRouteTypes {
     | '/events'
     | '/impact'
     | '/programs'
-    | '/programs/adopt-a-site'
-    | '/programs/reco-yogurt-forest'
-    | '/programs/urban-resilience'
+    | '/programs/climate-action'
+    | '/programs/girl-child-mentorship'
+    | '/programs/human-rights'
+    | '/programs/womens-empowerment'
+    | '/programs/youth-voice'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -209,40 +234,58 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProgramsRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/programs/adopt-a-site': {
-      id: '/programs/adopt-a-site'
-      path: '/adopt-a-site'
-      fullPath: '/programs/adopt-a-site'
-      preLoaderRoute: typeof ProgramsAdoptASiteRouteImport
+    '/programs/climate-action': {
+      id: '/programs/climate-action'
+      path: '/climate-action'
+      fullPath: '/programs/climate-action'
+      preLoaderRoute: typeof ProgramsClimateActionRouteImport
       parentRoute: typeof ProgramsRoute
     }
-    '/programs/reco-yogurt-forest': {
-      id: '/programs/reco-yogurt-forest'
-      path: '/reco-yogurt-forest'
-      fullPath: '/programs/reco-yogurt-forest'
-      preLoaderRoute: typeof ProgramsRecoYogurtForestRouteImport
+    '/programs/girl-child-mentorship': {
+      id: '/programs/girl-child-mentorship'
+      path: '/girl-child-mentorship'
+      fullPath: '/programs/girl-child-mentorship'
+      preLoaderRoute: typeof ProgramsGirlChildMentorshipRouteImport
       parentRoute: typeof ProgramsRoute
     }
-    '/programs/urban-resilience': {
-      id: '/programs/urban-resilience'
-      path: '/urban-resilience'
-      fullPath: '/programs/urban-resilience'
-      preLoaderRoute: typeof ProgramsUrbanResilienceRouteImport
+    '/programs/human-rights': {
+      id: '/programs/human-rights'
+      path: '/human-rights'
+      fullPath: '/programs/human-rights'
+      preLoaderRoute: typeof ProgramsHumanRightsRouteImport
+      parentRoute: typeof ProgramsRoute
+    }
+    '/programs/womens-empowerment': {
+      id: '/programs/womens-empowerment'
+      path: '/womens-empowerment'
+      fullPath: '/programs/womens-empowerment'
+      preLoaderRoute: typeof ProgramsWomensEmpowermentRouteImport
+      parentRoute: typeof ProgramsRoute
+    }
+    '/programs/youth-voice': {
+      id: '/programs/youth-voice'
+      path: '/youth-voice'
+      fullPath: '/programs/youth-voice'
+      preLoaderRoute: typeof ProgramsYouthVoiceRouteImport
       parentRoute: typeof ProgramsRoute
     }
   }
 }
 
 interface ProgramsRouteChildren {
-  ProgramsAdoptASiteRoute: typeof ProgramsAdoptASiteRoute
-  ProgramsRecoYogurtForestRoute: typeof ProgramsRecoYogurtForestRoute
-  ProgramsUrbanResilienceRoute: typeof ProgramsUrbanResilienceRoute
+  ProgramsClimateActionRoute: typeof ProgramsClimateActionRoute
+  ProgramsGirlChildMentorshipRoute: typeof ProgramsGirlChildMentorshipRoute
+  ProgramsHumanRightsRoute: typeof ProgramsHumanRightsRoute
+  ProgramsWomensEmpowermentRoute: typeof ProgramsWomensEmpowermentRoute
+  ProgramsYouthVoiceRoute: typeof ProgramsYouthVoiceRoute
 }
 
 const ProgramsRouteChildren: ProgramsRouteChildren = {
-  ProgramsAdoptASiteRoute: ProgramsAdoptASiteRoute,
-  ProgramsRecoYogurtForestRoute: ProgramsRecoYogurtForestRoute,
-  ProgramsUrbanResilienceRoute: ProgramsUrbanResilienceRoute,
+  ProgramsClimateActionRoute: ProgramsClimateActionRoute,
+  ProgramsGirlChildMentorshipRoute: ProgramsGirlChildMentorshipRoute,
+  ProgramsHumanRightsRoute: ProgramsHumanRightsRoute,
+  ProgramsWomensEmpowermentRoute: ProgramsWomensEmpowermentRoute,
+  ProgramsYouthVoiceRoute: ProgramsYouthVoiceRoute,
 }
 
 const ProgramsRouteWithChildren = ProgramsRoute._addFileChildren(

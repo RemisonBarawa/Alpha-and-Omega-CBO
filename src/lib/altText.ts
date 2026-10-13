@@ -7,41 +7,38 @@
  * Get descriptive alt text for an image based on type and context.
  * Ensures all alt text is WCAG-compliant and provides meaningful descriptions.
  * 
- * @param imageType - The type of image (e.g., 'program-hero', 'impact-image', 'partner-logo', 'mangrove')
+ * @param imageType - The type of image (e.g., 'program-hero', 'impact-image', 'partner-logo', 'community')
  * @param context - Additional context about the image (e.g., program name, location, story title)
  * @returns Descriptive alt text suitable for screen readers
  */
 export function getAltText(imageType: string, context: string): string {
   const altTemplates: Record<string, (context: string) => string> = {
     'program-hero': (ctx) => 
-      `${ctx} program - environmental conservation initiative in Mombasa`,
+      `${ctx} program - community empowerment initiative by Alpha & Omega CBO Kenya`,
     
     'impact-image': (ctx) => 
-      `Impact story: ${ctx} showing community environmental work`,
+      `Impact story: ${ctx} showing Alpha & Omega CBO Kenya community work`,
     
     'partner-logo': (ctx) => 
       `${ctx} partner organization logo`,
     
-    'mangrove': (ctx) => 
-      `Mangrove restoration site ${ctx ? `at ${ctx}` : ''}`,
-    
     'community': (ctx) => 
-      `Community members engaged in ${ctx || 'environmental conservation activities'}`,
+      `Community members engaged in ${ctx || 'Alpha & Omega CBO Kenya programs'}`,
     
     'hero': (ctx) => 
-      `${ctx} - Big Ship C.B.O. environmental conservation program`,
+      `${ctx} - Alpha & Omega CBO Kenya community empowerment program`,
     
-    'waste-recovery': (ctx) => 
-      `Waste recovery and environmental education initiative ${ctx ? `at ${ctx}` : ''}`,
+    'mentorship': (ctx) => 
+      `Mentorship and empowerment session ${ctx ? `at ${ctx}` : ''} with Alpha & Omega CBO Kenya`,
     
     'youth-training': (ctx) => 
-      `Youth skills training and livelihood development ${ctx ? `in ${ctx}` : ''}`,
+      `Youth civic participation and skills development ${ctx ? `in ${ctx}` : ''} with Alpha & Omega CBO Kenya`,
     
-    'coastal-landscape': (ctx) => 
-      `Coastal landscape showing environmental restoration ${ctx ? `near ${ctx}` : ''}`,
+    'rights-education': (ctx) => 
+      `Human rights awareness and education ${ctx ? `at ${ctx}` : ''} by Alpha & Omega CBO Kenya`,
     
     'default': (ctx) => 
-      ctx || 'Image showing Big Ship C.B.O. environmental conservation work',
+      ctx || 'Image showing Alpha & Omega CBO Kenya environmental conservation work',
   };
   
   const template = altTemplates[imageType] || altTemplates.default;
@@ -52,18 +49,25 @@ export function getAltText(imageType: string, context: string): string {
  * Get alt text for program-specific images.
  * Provides contextual descriptions for different programs.
  * 
- * @param programId - Program identifier (e.g., 'adopt-a-site', 'reco-yogurt-forest', 'urban-resilience')
- * @param location - Optional location context (e.g., 'Tudor Creek', 'Mikindani')
+ * @param programId - Program identifier (e.g., 'girl-child-mentorship', 'womens-empowerment', 'youth-voice', 'human-rights', 'climate-action')
+ * @param location - Optional location context (e.g., 'Bangladesh Slums', 'Mikindani Ward')
  * @returns Descriptive alt text for the program image
  */
 export function getProgramAltText(programId: string, location?: string): string {
   const programDescriptions: Record<string, string> = {
-    'adopt-a-site': 'Mangrove restoration and ecosystem monitoring through Adopt A Site program',
-    'reco-yogurt-forest': 'Waste recovery initiative transforming yoghurt cups into seedling containers',
-    'urban-resilience': 'Urban resilience and skills development program for coastal communities',
+    'girl-child-mentorship':
+      'Girl Child Mentorship & Empowerment program supporting girls in Bangladesh Slums',
+    'womens-empowerment':
+      "Women's Empowerment & Mentorship program for women in Mikindani Ward",
+    'youth-voice':
+      'Youth Voice & Civic Participation program engaging young people in Mombasa',
+    'human-rights':
+      'Human Rights & Socio-economic Rights program in Jomvu Sub-County',
+    'climate-action':
+      'Climate & Community Action program addressing environmental challenges in Mombasa',
   };
   
-  const baseDescription = programDescriptions[programId] || 'Environmental program activity';
+  const baseDescription = programDescriptions[programId] || 'Alpha & Omega CBO Kenya program activity';
   
   if (location) {
     return `${baseDescription} at ${location}`;

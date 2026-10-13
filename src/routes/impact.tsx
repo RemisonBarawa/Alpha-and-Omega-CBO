@@ -9,33 +9,33 @@ import type { VerificationStatus } from "@/components/site/ImpactMetric";
 export const Route = createFileRoute("/impact")({
   head: () => ({
     meta: [
-      { title: "Impact | Big Ship C.B.O." },
+      { title: "Impact | Alpha & Omega CBO Kenya" },
       {
         name: "description",
         content:
-          "Measurable environmental impact: Big Ship C.B.O.'s mangrove restoration, waste recovery, and community engagement outcomes since 2018.",
+          "Alpha & Omega CBO Kenya's community impact: partnerships, milestones, and program outcomes from 2019 to 2025.",
       },
-      { property: "og:title", content: "Impact | Big Ship C.B.O." },
+      { property: "og:title", content: "Impact | Alpha & Omega CBO Kenya" },
       {
         property: "og:description",
-        content: "Big Ship C.B.O.'s community-led conservation outcomes and ecosystem restoration in coastal Mombasa.",
+        content: "Alpha & Omega CBO Kenya's community milestones from 2019 to 2025.",
       },
-      { property: "og:image", content: "https://big-ship-org.netlify.app/big-ship-logo.png" },
+      { property: "og:image", content: "https://alphaandomegacbokenya.netlify.app/big-ship-logo.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Impact | Big Ship C.B.O." },
+      { name: "twitter:title", content: "Impact | Alpha & Omega CBO Kenya" },
       {
         name: "twitter:description",
-        content: "Community-led conservation outcomes and ecosystem restoration in coastal Mombasa.",
+        content: "Community milestones and program outcomes from Alpha & Omega CBO Kenya, 2019–2025.",
       },
-      { name: "twitter:image", content: "https://big-ship-org.netlify.app/big-ship-logo.png" },
+      { name: "twitter:image", content: "https://alphaandomegacbokenya.netlify.app/big-ship-logo.png" },
     ],
   }),
   component: ImpactPage,
 });
 
 /**
- * Impact metrics with explicit verification status and source attribution.
- * Requirements 4.1–4.7: cautious language, source attribution, conservative figures.
+ * Impact metrics — provable figures only.
+ * All data drawn from partnership records and public sources.
  */
 const stats: {
   to: number;
@@ -45,36 +45,37 @@ const stats: {
   suffix?: string;
 }[] = [
   {
-    to: 500,
-    label: "Mangrove seedlings planted (Tudor Creek restoration sites)",
-    source: "Big Ship C.B.O. internal records, 2018–2024",
-    status: "documented",
-  },
-  {
-    to: 150,
-    label: "Community members reportedly engaged in programs",
-    source: "Program participant logs; unaudited",
-    status: "reported",
-  },
-  {
-    to: 3,
-    label: "Primary restoration sites (Tudor Creek, Mikindani, Ganahola)",
-    source: "Big Ship C.B.O. site records, 2024",
+    to: 5,
+    label: "Active programs",
+    source: "Alpha & Omega CBO Kenya program register, 2025",
     status: "verified",
     suffix: "",
   },
   {
-    to: 5,
-    label: "Documented partner organisations including Kenya Forest Service and WWF-Kenya",
-    source: "Partnership agreements on file",
+    to: 4,
+    label: "Named partner organizations",
+    source: "Partnership agreements and public records, 2019–2025",
+    status: "documented",
+    suffix: "",
+  },
+  {
+    to: 2019,
+    label: "Year operations began — recognized by HURIA Human Rights Lab",
+    source: "HURIA Human Rights Lab public records, 2019",
+    status: "verified",
+    suffix: "",
+  },
+  {
+    to: 1,
+    label: "MoU signed — DARAJA Project with DAYOK",
+    source: "DARAJA Project MoU documentation, 2025",
     status: "documented",
     suffix: "",
   },
 ];
 
 /**
- * Outcome figures — these are reported or estimated (not externally verified).
- * Using the most conservative interpretation available.
+ * Outcome timeline — verified and documented milestones only.
  */
 const outcomes: {
   figure: string;
@@ -83,46 +84,46 @@ const outcomes: {
   status: VerificationStatus;
 }[] = [
   {
-    figure: "75%+",
-    label: "reported mangrove seedling survival rate at restoration sites",
-    source: "Big Ship C.B.O. field observations; not independently verified",
-    status: "reported",
+    figure: "2019",
+    label: "HURIA Human Rights Lab mentee designation — rights-based framework established",
+    source: "HURIA Human Rights Lab public records, 2019",
+    status: "verified",
   },
   {
-    figure: "300+",
-    label: "estimated square metres of mangrove habitat restored",
-    source: "Estimated from planting density records; subject to ongoing monitoring",
-    status: "estimated",
+    figure: "2023",
+    label: "Women's Empowerment program publicly featured; Pad Bank launched",
+    source: "Alpha & Omega CBO Kenya program records, 2023",
+    status: "documented",
   },
   {
-    figure: "15+",
-    label: "community volunteers documented as trained in restoration and monitoring",
-    source: "Training attendance records, 2023–2024",
+    figure: "2025",
+    label: "Community Hub role formalized via DARAJA Project MoU with DAYOK",
+    source: "DARAJA Project MoU, 2025",
     status: "documented",
   },
 ];
 
 const stories = [
   {
-    initials: "JM",
-    name: "Jane Mwangi",
-    role: "Mangrove restoration leader · Tudor Creek",
+    initials: "GP",
+    name: "Girl Child Program Participant",
+    role: "Bangladesh Slums · Mikindani Ward",
     quote:
-      "When we started planting, I didn't think we could make a difference. Now I see new shoots growing each season and fish returning to the creek.",
+      "[Placeholder — a verified testimonial will be added when available]",
   },
   {
-    initials: "KO",
-    name: "Kofi Okonkwo",
-    role: "RECO campaign organiser · Mombasa schools",
+    initials: "WE",
+    name: "Women's Empowerment Participant",
+    role: "Mikindani Ward · 2023",
     quote:
-      "Students who collected yoghurt cups realised they were creating something valuable. It changed how they think about waste.",
+      "[Placeholder — a verified testimonial will be added when available]",
   },
   {
-    initials: "SM",
-    name: "Salma Mohamed",
-    role: "Urban resilience participant",
+    initials: "YV",
+    name: "Youth Voice Participant",
+    role: "Jomvu Sub-County · 2024",
     quote:
-      "The training equipped me with skills and confidence. I'm now leading community adaptation discussions in my neighbourhood.",
+      "[Placeholder — a verified testimonial will be added when available]",
   },
 ];
 
@@ -145,14 +146,14 @@ function ImpactPage() {
   return (
     <>
       <PageHero
-        eyebrow="By The Numbers"
-        title="Measurable environmental and community impact"
-        body="Big Ship C.B.O. tracks outcomes in mangrove restoration, community engagement, and coastal ecosystem health since 2018. Figures below are drawn from our internal records and partner reports; where independent verification is unavailable, cautious language is used."
+        eyebrow="Our Impact"
+        title="Community milestones from 2019 to 2025"
+        body="Alpha & Omega CBO Kenya tracks its progress through verified partnerships and documented milestones. Figures shown are drawn from partnership records and public sources; where independent verification is unavailable, cautious language is used."
         image={IMG.students}
         stats={[
-          ["500+", "Seedlings planted"],
-          ["150+", "Community engaged"],
-          ["3", "Active sites"],
+          ["5",    "Active programs"],
+          ["4",    "Named partner organizations"],
+          ["2019", "Year operations began"],
         ]}
       />
 
@@ -161,9 +162,9 @@ function ImpactPage() {
         <div className="mx-auto max-w-7xl px-6">
           <Reveal>
             <p className="text-xs text-muted-foreground/70 italic">
-              ✱ Figures are sourced from Big Ship C.B.O. program records unless otherwise noted. 
-              Badges indicate data provenance: <strong>Documented</strong> = on-file records; 
-              <strong> Reported</strong> = self-reported, unaudited; 
+              ✱ Figures are sourced from Alpha &amp; Omega CBO Kenya program records and public partnership documentation unless otherwise noted.
+              Badges indicate data provenance: <strong>Documented</strong> = on-file records;
+              <strong> Reported</strong> = self-reported, unaudited;
               <strong> Estimated</strong> = approximate, based on field observations.
             </p>
           </Reveal>
@@ -186,7 +187,7 @@ function ImpactPage() {
             ))}
           </div>
 
-          {/* ── Outcome figures ── */}
+          {/* ── Outcome timeline ── */}
           <div className="mt-16 grid gap-6 md:grid-cols-3">
             {outcomes.map((o, i) => (
               <Reveal
@@ -228,14 +229,14 @@ function ImpactPage() {
                 delay={i * 120}
                 className="card-lift rounded-3xl border border-white/12 bg-white/5 p-7"
               >
-                <p className="text-sm leading-relaxed text-navy-foreground/85">"{s.quote}"</p>
+                <p className="text-sm leading-relaxed text-white">"{s.quote}"</p>
                 <div className="mt-6 flex items-center gap-3">
                   <span className="grid size-10 place-items-center rounded-full bg-azure/20 text-sm font-bold text-azure">
                     {s.initials}
                   </span>
                   <span className="text-sm">
-                    <span className="block font-semibold">{s.name}</span>
-                    <span className="text-navy-foreground/60">{s.role}</span>
+                    <span className="block font-semibold text-white">{s.name}</span>
+                    <span className="text-white/60">{s.role}</span>
                   </span>
                 </div>
               </Reveal>
@@ -246,8 +247,8 @@ function ImpactPage() {
 
       <CtaBand
         eyebrow="Support"
-        title="Help us scale environmental impact"
-        body="Partners, funders and community volunteers make restoration possible. We're always looking for ways to grow our work."
+        title="Support community empowerment in Mombasa"
+        body="Partners, funders, and volunteers make our work possible. We're always looking to grow our reach."
         primary={{ to: "/contact", label: "Get involved" }}
         secondary={{ to: "/about", label: "Our story" }}
       />

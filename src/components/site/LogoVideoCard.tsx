@@ -71,7 +71,7 @@ export function LogoVideoCard({
         {showFallback && logoImage ? (
           <img
             src={logoImage}
-            alt="Big Ship C.B.O. Logo"
+            alt="Alpha & Omega CBO Kenya Logo"
             className="animate-gentle-pulse block w-full object-cover"
             style={{ aspectRatio: aspect }}
           />

@@ -1,5 +1,5 @@
 /**
- * Contact information utility for Big Ship C.B.O.
+ * Contact information utility for Alpha & Omega CBO Kenya.
  * Returns available contact data with optional fields so the Footer
  * and other components can render conditionally based on availability.
  *
@@ -19,22 +19,22 @@ export interface ContactInfo {
 }
 
 /**
- * Returns Big Ship C.B.O. contact details.
+ * Returns Alpha & Omega CBO Kenya contact details.
  *
  * Fields that have not been officially confirmed are set to `null` so the
  * Footer can gracefully fall back to a generic office-visit message.
  *
- * Update this single source of truth when contact details are confirmed.
+ * Update this single source of truth when contact details change.
  */
 export function getContactInfo(): ContactInfo {
-  // Address is confirmed (documented operational base).
-  const address = "Off Mama Ngina Drive, Mombasa, Kenya";
+  // Address confirmed — operational base in Bangladesh Slums, Mombasa.
+  const address = "Bangladesh Slums, Mikindani Ward, Jomvu Sub-County, Mombasa County, Kenya";
 
-  // Phone placeholder — update when the actual number is confirmed.
-  const phone: string | null = "+254 722 000000";
+  // Phone number for Alpha & Omega CBO Kenya.
+  const phone: string | null = "+254 740 610 899";
 
-  // Email placeholder — update when the actual address is confirmed.
-  const email: string | null = "info@bigshipcbo.org";
+  // Email address for Alpha & Omega CBO Kenya.
+  const email: string | null = "alphaandomegacbokenya001@gmail.com";
 
   const hasAny = address !== null || phone !== null || email !== null;
 

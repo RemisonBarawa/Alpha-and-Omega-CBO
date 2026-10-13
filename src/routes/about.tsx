@@ -7,35 +7,35 @@ import { CtaBand } from "@/components/site/CtaBand";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About Us | Big Ship C.B.O." },
+      { title: "About Us | Alpha & Omega CBO Kenya" },
       {
         name: "description",
         content:
-          "Our story and vision: Big Ship C.B.O. drives community-led mangrove restoration and environmental resilience in Mombasa's coastal areas.",
+          "Alpha & Omega CBO Kenya's story: a youth-led CBO rooted in Bangladesh Slums, Mikindani Ward, Mombasa, founded in 2019.",
       },
-      { property: "og:title", content: "About Big Ship C.B.O." },
+      { property: "og:title", content: "About Alpha & Omega CBO Kenya" },
       {
         property: "og:description",
-        content: "Community-led environmental conservation in Mombasa since 2018. Our story, values, and conservation approach.",
+        content: "Youth-led community organization in Bangladesh Slums, Mombasa, supporting women, girls, and young people since 2019.",
       },
-      { property: "og:image", content: "https://big-ship-org.netlify.app/big-ship-logo.png" },
+      { property: "og:image", content: "https://alphaandomegacbokenya.netlify.app/big-ship-logo.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "About Big Ship C.B.O." },
+      { name: "twitter:title", content: "About Alpha & Omega CBO Kenya" },
       {
         name: "twitter:description",
-        content: "Community-led environmental conservation in Mombasa since 2018.",
+        content: "Youth-led community organization in Bangladesh Slums, Mombasa, founded in 2019.",
       },
-      { name: "twitter:image", content: "https://big-ship-org.netlify.app/big-ship-logo.png" },
+      { name: "twitter:image", content: "https://alphaandomegacbokenya.netlify.app/big-ship-logo.png" },
     ],
   }),
   component: AboutPage,
 });
 
 const values = [
-  ["Community-Led", "Environmental conservation is led by local communities who understand coastal needs and priorities."],
-  ["Sustainable Impact", "We measure success through long-term ecosystem health and measurable environmental outcomes."],
-  ["Resilience Focus", "Building adaptive capacity for communities facing climate change and coastal challenges."],
-  ["Integrated Approach", "Environmental work connects with livelihoods, education, and community wellbeing."],
+  ["Youth-Led",        "Young people from the community guide priorities, lead programs, and own outcomes."],
+  ["Gender Responsive","Programs specifically address the needs of women and girls alongside young men and boys."],
+  ["Rights-Based",     "All work is grounded in human rights principles, informed by our partnership with HURIA Human Rights Lab."],
+  ["Community-Rooted", "We are from Bangladesh Slums — our decisions are made with and by the community we serve."],
 ];
 
 function AboutPage() {
@@ -43,13 +43,13 @@ function AboutPage() {
     <>
       <PageHero
         eyebrow="Our Story"
-        title="Environmental conservation led by community since 2018"
-        body="Big Ship C.B.O. began with a vision to restore Mombasa's coastal ecosystems through community participation. Today, our work spans mangrove restoration, waste recovery, and urban resilience across three major programs."
+        title="Youth-led community action in Bangladesh Slums since 2019"
+        body="Alpha & Omega CBO Kenya was founded to support women, girls, and young people in Bangladesh Slums, Mikindani Ward, Jomvu Sub-County. Today our work spans five programs in mentorship, rights, civic participation, and community action."
         image={IMG.team}
         stats={[
-          ["2018", "Founded with environmental focus"],
-          ["500+", "Mangrove seedlings planted"],
-          ["3", "Active restoration locations"],
+          ["2019",    "Year founded"],
+          ["5",       "Active programs"],
+          ["Mombasa", "Bangladesh Slums, Jomvu"],
         ]}
       />
 
@@ -58,7 +58,7 @@ function AboutPage() {
           <Reveal className="overflow-hidden rounded-[2rem] border border-border shadow-soft">
             <img
               src={IMG.community}
-              alt="Community members collaborating at Big Ship C.B.O. environmental conservation initiative in Mombasa"
+              alt="Community members engaged in Alpha & Omega CBO Kenya programs in Bangladesh Slums, Mombasa"
               loading="lazy"
               width={1920}
               height={1088}
@@ -71,19 +71,19 @@ function AboutPage() {
             </Reveal>
             <Reveal delay={100}>
               <p className="mt-5 text-muted-foreground">
-                Mombasa's coastal ecosystems face mounting pressure from development, climate change, and degradation. Too often, conservation happens without the voice or participation of the communities who depend on these ecosystems. We exist to change that.
+                Bangladesh Slums in Mikindani Ward, Jomvu Sub-County, is home to a vibrant community facing significant challenges — limited access to education, persistent gender inequality, restricted economic opportunity, and the compounding effects of climate vulnerability.
               </p>
             </Reveal>
             <Reveal delay={180}>
               <p className="mt-4 text-muted-foreground">
-                By centering community leadership, combining environmental science with local knowledge, and linking conservation to livelihoods and resilience, we believe coastal communities can restore their ecosystems while building stronger, more sustainable futures.
+                Alpha &amp; Omega CBO Kenya was founded to address these challenges directly, by and for the community. By centering youth leadership, responding to the needs of women and girls, grounding work in human rights principles, and building civic agency, we believe community-rooted action creates lasting change.
               </p>
             </Reveal>
             <div className="mt-8 grid gap-4 sm:grid-cols-3">
               {[
-                { to: 500, label: "Mangrove seedlings planted" },
-                { to: 150, label: "Community members engaged" },
-                { to: 3, label: "Active restoration sites" },
+                { to: 5,    label: "Active programs" },
+                { to: 4,    label: "Named partner organizations" },
+                { to: 2019, label: "Year founded" },
               ].map((s, i) => (
                 <Reveal
                   key={s.label}
@@ -127,19 +127,19 @@ function AboutPage() {
           <Reveal className="rounded-3xl border border-border bg-card p-8">
             <span className="eyebrow">Mission</span>
             <p className="mt-4 text-muted-foreground">
-              To drive sustainable mangrove restoration, waste recovery, and urban resilience in Mombasa through community-led environmental conservation and integrated livelihood development.
+              To empower women, girls, and young people in Bangladesh Slums through mentorship, rights awareness, civic participation, and community action.
             </p>
           </Reveal>
           <Reveal delay={120} className="brand-gradient rounded-3xl p-8 text-navy-foreground">
             <span className="text-xs font-semibold tracking-[0.2em] uppercase">Vision</span>
-            <p className="mt-4 font-display text-3xl">Thriving ecosystems, empowered communities.</p>
+            <p className="mt-4 font-display text-3xl">Empowered youth, resilient communities.</p>
           </Reveal>
         </div>
       </section>
 
       <CtaBand
-        title="Join the conservation movement"
-        body="Whether you're interested in volunteering, partnering, or learning more about our environmental initiatives, we'd love to hear from you."
+        title="Partner with Alpha & Omega CBO Kenya"
+        body="We welcome partners, supporters, and volunteers committed to community empowerment in Mombasa."
         primary={{ to: "/contact", label: "Get in touch" }}
         secondary={{ to: "/programs", label: "See our programs" }}
       />

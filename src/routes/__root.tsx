@@ -82,33 +82,33 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Home | Big Ship C.B.O." },
+      { title: "Alpha & Omega CBO Kenya" },
       {
         name: "description",
         content:
-          "Community-led environmental conservation in Mombasa. Mangrove restoration, waste recovery, and urban resilience programs creating lasting change.",
+          "Youth-led community organization in Bangladesh Slums, Mikindani Ward, Mombasa — supporting women, girls, and young people through mentorship, rights awareness, civic participation, and community action.",
       },
-      { name: "author", content: "Big Ship C.B.O." },
-      { property: "og:title", content: "Big Ship C.B.O. | Environmental Conservation in Mombasa" },
+      { name: "author", content: "Alpha & Omega CBO Kenya" },
+      { property: "og:title", content: "Alpha & Omega CBO Kenya | Empower · Educate · Transform" },
       {
         property: "og:description",
         content:
-          "Community-led mangrove restoration, waste recovery, and urban resilience programs since 2018.",
+          "Youth-led CBO in Mombasa supporting women, girls, and young people through mentorship, rights, civic participation, and community action.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://big-ship-org.netlify.app" },
-      { property: "og:image", content: "https://big-ship-org.netlify.app/big-ship-logo.png" },
+      { property: "og:url", content: "https://alphaandomegacbokenya.netlify.app" },
+      { property: "og:image", content: "https://alphaandomegacbokenya.netlify.app/logos/Alpha%20and%20Omega%20Logo.jpg" },
       { property: "og:image:width", content: "1200" },
       { property: "og:image:height", content: "630" },
       { property: "og:image:type", content: "image/png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Big Ship C.B.O. | Environmental Conservation in Mombasa" },
+      { name: "twitter:title", content: "Alpha & Omega CBO Kenya | Empower · Educate · Transform" },
       {
         name: "twitter:description",
         content:
-          "Community-led mangrove restoration, waste recovery, and urban resilience programs since 2018.",
+          "Youth-led CBO in Mombasa supporting women, girls, and young people.",
       },
-      { name: "twitter:image", content: "https://big-ship-org.netlify.app/big-ship-logo.png" },
+      { name: "twitter:image", content: "https://alphaandomegacbokenya.netlify.app/logos/Alpha%20and%20Omega%20Logo.jpg" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
@@ -118,7 +118,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap",
       },
-      { rel: "icon", href: "/big-ship-icon.svg", type: "image/svg+xml" },
+      { rel: "icon", href: "/logos/Alpha%20and%20Omega%20Logo.jpg", type: "image/jpeg" },
     ],
   }),
   shellComponent: RootShell,

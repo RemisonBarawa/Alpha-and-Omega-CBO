@@ -1,10 +1,10 @@
 import { Reveal } from "@/components/site/Reveal";
 
 const partners = [
-  "Kenya Forest Service",
-  "University of Nairobi",
-  "WWF-Kenya",
-  "Innovate Resource Agency (IRA)",
+  "HURIA Human Rights Lab",
+  "Shining Hope for Communities (SHOFCO)",
+  "Dream Achievers Youth Organization Kenya (DAYOK)",
+  "DARAJA Project",
 ];
 
 export function Partners() {
@@ -12,13 +12,12 @@ export function Partners() {
     <section className="section overflow-hidden bg-secondary">
       <div className="mx-auto max-w-7xl px-6">
         <Reveal className="text-center">
-          <span className="eyebrow">Our Partners</span>
-          <h2 className="mt-4 text-3xl font-bold sm:text-4xl">
-            Working together for coastal conservation
+          <span className="eyebrow text-white">Our Partners</span>
+          <h2 className="mt-4 text-3xl font-bold sm:text-4xl text-white">
+            Working together for community empowerment
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
-            We partner with organizations and institutions committed to environmental conservation, 
-            coastal ecosystem restoration, and community-led development in Mombasa.
+          <p className="mx-auto mt-4 max-w-2xl text-white/80">
+            We partner with organizations committed to human rights, youth empowerment, and community development in Mombasa and across Kenya.
           </p>
         </Reveal>
       </div>

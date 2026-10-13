@@ -7,43 +7,47 @@ import { getImpactStoryAltText } from "@/lib/altText";
 const stories = [
   {
     image: IMG.workspace,
-    tag: "Mangrove Restoration",
-    name: "Tudor Creek Restoration",
-    meta: "Tudor Creek, Mombasa · 2023",
-    quote: "Every seedling planted is a commitment to our coastal future.",
-    body: "Community-led planting initiative resulted in a reported 300+ mangrove seedlings establishing along Tudor Creek shoreline. The project improved coastal resilience, provided habitat for marine life, and strengthened community stewardship of local ecosystems.",
-    stat: "~300 seedlings documented · ~75% survival rate (field estimate)",
-    statNote: "Source: Big Ship C.B.O. field records, 2023 — not independently verified",
+    tag: "Human Rights",
+    name: "HURIA Human Rights Lab Partnership",
+    meta: "Jomvu Sub-County, Mombasa · 2019",
+    quote:
+      "[Placeholder — a verified testimonial will be added when available]",
+    body: "In 2019, HURIA Human Rights Lab identified Alpha & Omega CBO Kenya as a mentee organization working on socio-economic rights in Jomvu Sub-County. This partnership established the rights-based framework that underpins all of Alpha & Omega's programs today.",
+    stat: "Mentee designation 2019 · Rights-based framework established",
+    statNote: "Source: HURIA Human Rights Lab public records, 2019",
   },
   {
     image: IMG.community,
-    tag: "Waste Recovery",
-    name: "Yogurt Cup Recycling Campaign",
-    meta: "Mombasa schools · 2023",
-    quote: "Turning waste into environmental solutions—one cup at a time.",
-    body: "Schools and communities reportedly collected over 5,000 discarded yoghurt cups, transforming them into seedling containers for reforestation. This circular economy initiative demonstrated practical waste management while supporting mangrove restoration.",
-    stat: "~5,000 cups reported · ~2,000 seedlings (estimated)",
-    statNote: "Source: Campaign participation logs; figures are self-reported",
+    tag: "Girl Child Mentorship",
+    name: "Pad Bank Launch",
+    meta: "Bangladesh Slums, Mikindani Ward · 2023",
+    quote:
+      "[Placeholder — a verified testimonial will be added when available]",
+    body: "In 2023, the Pad Bank was launched under the Girl Child Mentorship & Empowerment Program, providing free menstrual hygiene products to girls in Bangladesh Slums. The initiative directly supports school attendance and dignity for girls in the community.",
+    stat: "Pad Bank operational 2023 · Girls' school attendance supported",
+    statNote: "Source: Alpha & Omega CBO Kenya program records, 2023",
   },
   {
     image: IMG.students,
-    tag: "Skills Development",
-    name: "Youth Livelihoods Training",
-    meta: "Coastal settlements · 2023",
-    quote: "Skills training empowers community members to build sustainable futures.",
-    body: "The Urban Resilience program provided livelihoods training to a documented 120+ youth and women in coastal neighbourhoods. Participants gained practical skills for sustainable income generation and community leadership.",
-    stat: "120+ trained (documented) · 65% employment rate (reported)",
-    statNote: "Source: Training attendance records; employment rate is self-reported, not audited",
+    tag: "Youth Voice",
+    name: "SHOFCO Youth Voice Partnership",
+    meta: "Jomvu Sub-County, Mombasa · 2024",
+    quote:
+      "[Placeholder — a verified testimonial will be added when available]",
+    body: "Shining Hope for Communities (SHOFCO) spotlighted Alpha & Omega CBO Kenya as a youth-voice partner in 2024, recognizing the organization's work engaging young people in civic participation and community decision-making in Jomvu Sub-County.",
+    stat: "SHOFCO partner spotlight 2024 · Youth civic reach expanded",
+    statNote: "Source: SHOFCO public communications, 2024",
   },
   {
     image: IMG.tech,
-    tag: "Community Monitoring",
-    name: "Mikoko Watch Initiative",
-    meta: "Coastal ecosystems · Ongoing",
-    quote: "Local knowledge is our strongest tool for conservation.",
-    body: "Community-based monitoring programme empowers local stakeholders to document and report on mangrove ecosystem health. This initiative combines traditional knowledge with modern monitoring tools for long-term coastal stewardship.",
-    stat: "40+ monitors (documented) · Real-time data collection (ongoing)",
-    statNote: "Source: Volunteer sign-up records; programme is ongoing",
+    tag: "Climate Action",
+    name: "DARAJA Project MoU & Community Hub",
+    meta: "Mikindani Ward, Mombasa · 2025",
+    quote:
+      "[Placeholder — a verified testimonial will be added when available]",
+    body: "In 2025, Alpha & Omega CBO Kenya signed a Memorandum of Understanding with Dream Achievers Youth Organization Kenya (DAYOK) through the DARAJA Project, formalizing the organization's role as a Community Hub in Mikindani Ward.",
+    stat: "Community Hub 2025 · DARAJA MoU signed with DAYOK",
+    statNote: "Source: DARAJA Project MoU documentation, 2025",
   },
 ];
 
@@ -53,10 +57,9 @@ export function ImpactStories() {
       <div className="mx-auto max-w-7xl px-6">
         <Reveal>
           <span className="eyebrow">Real Communities. Real Change.</span>
-          <h2 className="mt-4 text-3xl font-bold sm:text-4xl">Stories of conservation impact</h2>
+          <h2 className="mt-4 text-3xl font-bold sm:text-4xl">Stories of community impact</h2>
           <p className="mt-4 max-w-2xl text-muted-foreground">
-            Behind every environmental restoration initiative is a community working together to protect 
-            our coastal ecosystems. Here are stories of their success.
+            Behind every program is a community working together to build better lives. Here are stories from Alpha &amp; Omega CBO Kenya's work.
           </p>
         </Reveal>
 
@@ -89,7 +92,7 @@ export function ImpactStories() {
               </figure>
 
               <div className="px-4 pb-6 lg:px-8 lg:pb-0">
-                <p className="font-display text-xl leading-relaxed sm:text-2xl">“{s.quote}”</p>
+                <p className="font-display text-xl leading-relaxed sm:text-2xl">"{s.quote}"</p>
                 <p className="mt-5 text-sm leading-relaxed text-muted-foreground">{s.body}</p>
                 <p className="mt-6 inline-flex rounded-full bg-primary/10 px-4 py-1.5 text-xs font-semibold text-primary">
                   {s.stat}
@@ -106,13 +109,13 @@ export function ImpactStories() {
 
         <Reveal delay={100} className="mt-12 text-center">
           <p className="text-sm text-muted-foreground">
-            These stories represent the community-led conservation outcomes we witness every day.
+            These stories represent the community-led empowerment work we witness every day.
           </p>
           <Link
             to="/impact"
             className="group mt-5 inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-primary-foreground transition-transform hover:-translate-y-0.5"
           >
-            Explore all conservation stories
+            Explore all impact stories
             <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
           </Link>
         </Reveal>

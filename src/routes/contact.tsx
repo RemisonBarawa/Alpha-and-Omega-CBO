@@ -9,25 +9,25 @@ import { IMG } from "@/lib/images";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact | Big Ship C.B.O." },
+      { title: "Contact | Alpha & Omega CBO Kenya" },
       {
         name: "description",
         content:
-          "Get in touch with Big Ship C.B.O. in Mombasa. Partnerships, programs, and community engagement in environmental conservation.",
+          "Get in touch with Alpha & Omega CBO Kenya in Bangladesh Slums, Mikindani Ward, Mombasa. Partnerships, programs, and community engagement.",
       },
-      { property: "og:title", content: "Contact | Big Ship C.B.O." },
+      { property: "og:title", content: "Contact | Alpha & Omega CBO Kenya" },
       {
         property: "og:description",
-        content: "Reach out to Big Ship C.B.O. for partnerships, programs, and community engagement opportunities.",
+        content: "Reach out to Alpha & Omega CBO Kenya for partnerships, programs, and community engagement opportunities.",
       },
-      { property: "og:image", content: "https://big-ship-org.netlify.app/big-ship-logo.png" },
+      { property: "og:image", content: "https://alphaandomegacbokenya.netlify.app/big-ship-logo.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Contact | Big Ship C.B.O." },
+      { name: "twitter:title", content: "Contact | Alpha & Omega CBO Kenya" },
       {
         name: "twitter:description",
-        content: "Get in touch with Big Ship C.B.O. in Mombasa.",
+        content: "Get in touch with Alpha & Omega CBO Kenya in Bangladesh Slums, Mombasa.",
       },
-      { name: "twitter:image", content: "https://big-ship-org.netlify.app/big-ship-logo.png" },
+      { name: "twitter:image", content: "https://alphaandomegacbokenya.netlify.app/big-ship-logo.png" },
     ],
   }),
   component: ContactPage,
@@ -40,13 +40,13 @@ function ContactPage() {
     <>
       <PageHero
         eyebrow="Say Hello"
-        title="Connect with Big Ship C.B.O."
-        body="Questions about our conservation programs, partnership opportunities, or community participation? We'd love to hear from you."
+        title="Connect with Alpha & Omega CBO Kenya"
+        body="Questions about our programs, partnership opportunities, or community participation? We'd love to hear from you."
         image={IMG.community}
         stats={[
           ["Mon – Fri", "9:00 AM – 5:00 PM"],
-          ["Mombasa", "Coastal Kenya"],
-          ["< 48 hrs", "Typical response time"],
+          ["Mombasa",   "Bangladesh Slums, Jomvu"],
+          ["< 48 hrs",  "Typical response time"],
         ]}
       />
 
@@ -54,9 +54,9 @@ function ContactPage() {
         <div className="mx-auto grid max-w-7xl gap-10 px-6 lg:grid-cols-[1fr_1.2fr]">
           <div className="space-y-4">
             {[
-              { icon: MapPin, title: "Visit", body: "Mombasa, Kenya" },
-              { icon: Phone, title: "Call", body: "Available through our website" },
-              { icon: Mail, title: "Email", body: "hello@bigshipcbo.org" },
+              { icon: MapPin, title: "Visit",  body: "Bangladesh Slums, Mikindani Ward, Jomvu Sub-County, Mombasa County, Kenya" },
+              { icon: Phone,  title: "Call",   body: "+254 740 610 899" },
+              { icon: Mail,   title: "Email",  body: "alphaandomegacbokenya001@gmail.com" },
             ].map((item, i) => (
               <Reveal
                 key={item.title}
@@ -77,7 +77,7 @@ function ContactPage() {
             <Reveal delay={280} className="rounded-2xl border border-border bg-secondary p-6">
               <h2 className="font-display text-lg font-semibold">Opening hours</h2>
               <p className="mt-2 text-sm text-muted-foreground">
-                Monday – Friday, 9:00 AM to 5:00 PM. Community events and restoration activities run throughout the year.
+                Monday – Friday, 9:00 AM to 5:00 PM. Community members are welcome to visit us in Bangladesh Slums, Mikindani Ward.
               </p>
             </Reveal>
           </div>

@@ -8,6 +8,7 @@ import {
   Mail,
   Menu,
   Phone,
+  Twitter,
   X,
   Youtube,
 } from "lucide-react";
@@ -23,10 +24,12 @@ const navItems: { to: "/" | "/about" | "/programs" | "/board" | "/impact" | "/co
 ];
 
 const programLinks = [
-  { to: "/programs", label: "All Programs" },
-  { to: "/programs/adopt-a-site", label: "Adopt A Site" },
-  { to: "/programs/reco-yogurt-forest", label: "RECO/Yogurt Forest" },
-  { to: "/programs/urban-resilience", label: "Urban Resilience" },
+  { to: "/programs",                       label: "All Programs" },
+  { to: "/programs/girl-child-mentorship", label: "Girl Child Mentorship" },
+  { to: "/programs/womens-empowerment",    label: "Women's Empowerment" },
+  { to: "/programs/youth-voice",           label: "Youth Voice" },
+  { to: "/programs/human-rights",          label: "Human Rights" },
+  { to: "/programs/climate-action",        label: "Climate Action" },
 ];
 
 export function Header() {
@@ -46,34 +49,54 @@ export function Header() {
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-2 text-xs">
           <div className="flex items-center gap-6">
             <a
-              href="mailto:info@bigshipcbo.org"
+              href="mailto:alphaandomegacbokenya001@gmail.com"
               className="inline-flex items-center gap-2 opacity-85 transition-opacity hover:opacity-100"
             >
-              <Mail className="size-3.5" /> info@bigshipcbo.org
+              <Mail className="size-3.5" /> alphaandomegacbokenya001@gmail.com
             </a>
             <a
-              href="tel:+254722000000"
+              href="tel:+254740610899"
               className="inline-flex items-center gap-2 opacity-85 transition-opacity hover:opacity-100"
             >
-              <Phone className="size-3.5" /> +254 722 000000
+              <Phone className="size-3.5" /> +254 740 610 899
             </a>
           </div>
           <div className="flex items-center gap-4">
-            {([
-              [Facebook, "Big Ship C.B.O. on Facebook"],
-              [Instagram, "Big Ship C.B.O. on Instagram"],
-              [Linkedin, "Big Ship C.B.O. on LinkedIn"],
-              [Youtube, "Big Ship C.B.O. on YouTube"],
-            ] as const).map(([Icon, label], i) => (
-              <a
-                key={i}
-                href="#"
-                aria-label={label}
-                className="opacity-75 transition-all hover:-translate-y-0.5 hover:opacity-100"
-              >
-                <Icon className="size-3.5" />
-              </a>
-            ))}
+            <a
+              href="https://www.facebook.com/alphaandomegacbokenya"
+              aria-label="Alpha & Omega CBO Kenya on Facebook"
+              className="opacity-75 transition-all hover:-translate-y-0.5 hover:opacity-100"
+            >
+              <Facebook className="size-3.5" />
+            </a>
+            <a
+              href="https://x.com/and_cbo"
+              aria-label="Alpha & Omega CBO Kenya on X"
+              className="opacity-75 transition-all hover:-translate-y-0.5 hover:opacity-100"
+            >
+              <Twitter className="size-3.5" />
+            </a>
+            <a
+              href="#"
+              aria-label="Alpha & Omega CBO Kenya on Instagram"
+              className="opacity-75 transition-all hover:-translate-y-0.5 hover:opacity-100"
+            >
+              <Instagram className="size-3.5" />
+            </a>
+            <a
+              href="#"
+              aria-label="Alpha & Omega CBO Kenya on LinkedIn"
+              className="opacity-75 transition-all hover:-translate-y-0.5 hover:opacity-100"
+            >
+              <Linkedin className="size-3.5" />
+            </a>
+            <a
+              href="#"
+              aria-label="Alpha & Omega CBO Kenya on YouTube"
+              className="opacity-75 transition-all hover:-translate-y-0.5 hover:opacity-100"
+            >
+              <Youtube className="size-3.5" />
+            </a>
           </div>
         </div>
       </div>
@@ -88,15 +111,15 @@ export function Header() {
           <Link to="/" className="group flex items-center gap-3">
             <span className="grid size-10 place-items-center overflow-hidden rounded-xl shadow-soft transition-transform group-hover:rotate-6">
               <img
-                src="/big-ship-logo.svg"
-                alt="Big Ship C.B.O. logo"
+                src="/logos/Alpha and Omega Logo.jpg"
+                alt="Alpha & Omega CBO Kenya logo"
                 className="size-full object-contain"
               />
             </span>
             <span className="font-display text-lg leading-none font-bold tracking-tight">
-              Big Ship
+              Alpha &amp; Omega
               <span className="block text-[0.62rem] font-semibold tracking-[0.28em] text-muted-foreground uppercase">
-                C.B.O.
+                CBO Kenya
               </span>
             </span>
           </Link>

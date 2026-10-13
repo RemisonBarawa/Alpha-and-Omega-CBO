@@ -45,66 +45,65 @@
 
 :root {
   --radius: 0.875rem;
-  --background: oklch(0.995 0.002 220);
-  --foreground: oklch(0.19 0.045 220);
+  --background: oklch(0.995 0.002 0);
+  --foreground: oklch(0.03 0.01 0);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.19 0.045 220);
+  --card-foreground: oklch(0.03 0.01 0);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.19 0.045 220);
-  /* Big Ship C.B.O. brand palette — coastal conservation organisation.
-     Primary: ocean blue-green (mangrove coastline hue)
-     Azure: ocean blue accent
-     Teal: mangrove/estuary green-teal
-     Coral → Forest: earthy forest green replaces warm coral for environmental identity
-     Sand / Navy: retained — earthy coastal tones that already fit the brand */
-  --primary: oklch(0.50 0.17 220);
-  --primary-foreground: oklch(0.99 0.005 220);
-  --secondary: oklch(0.955 0.014 220);
-  --secondary-foreground: oklch(0.26 0.08 220);
-  --muted: oklch(0.962 0.01 220);
-  --muted-foreground: oklch(0.52 0.035 220);
-  --accent: oklch(0.94 0.03 180);
-  --accent-foreground: oklch(0.26 0.08 220);
-  --destructive: oklch(0.6 0.22 25);
-  --destructive-foreground: oklch(0.99 0.005 220);
-  --border: oklch(0.912 0.014 210);
-  --input: oklch(0.912 0.014 210);
-  --ring: oklch(0.50 0.17 220);
-  --navy: oklch(0.26 0.086 220);
-  --navy-foreground: oklch(0.98 0.005 220);
-  --azure: oklch(0.62 0.14 220);
-  --sand: oklch(0.94 0.035 85);
-  --coral: oklch(0.57 0.14 145);
-  --teal: oklch(0.55 0.12 175);
+  --popover-foreground: oklch(0.03 0.01 0);
+  /* Alpha & Omega CBO Kenya brand palette
+     Primary: #FE0000 (Vibrant Red) - Bold, action-oriented, community energy
+     Secondary: #138F13 (Forest Green) - Growth, nature, empowerment, sustainability
+     Accent/Text: #030101 (Deep Black) - Professional, contrast, readability
+     Neutral: #FFFFFF (White) - Clean, clarity, accessibility */
+  --primary: oklch(0.55 0.25 10);
+  --primary-foreground: oklch(0.99 0.005 0);
+  --secondary: oklch(0.45 0.18 140);
+  --secondary-foreground: oklch(0.99 0.005 0);
+  --muted: oklch(0.95 0.01 0);
+  --muted-foreground: oklch(0.25 0.05 0);
+  --accent: oklch(0.03 0.01 0);
+  --accent-foreground: oklch(0.99 0.005 0);
+  --destructive: oklch(0.55 0.25 10);
+  --destructive-foreground: oklch(0.99 0.005 0);
+  --border: oklch(0.93 0.01 0);
+  --input: oklch(0.93 0.01 0);
+  --ring: oklch(0.55 0.25 10);
+  --navy: oklch(0.03 0.01 0);
+  --navy-foreground: oklch(0.99 0.005 0);
+  --azure: oklch(0.55 0.25 10);
+  --sand: oklch(0.95 0.01 0);
+  --coral: oklch(0.45 0.18 140);
+  --teal: oklch(0.45 0.18 140);
   --gradient-hero: linear-gradient(
     130deg,
-    oklch(0.22 0.08 220 / 0.94) 0%,
-    oklch(0.28 0.1 210 / 0.78) 45%,
-    oklch(0.38 0.12 185 / 0.5) 100%
+    oklch(0.55 0.25 10 / 0.94) 0%,
+    oklch(0.45 0.18 140 / 0.78) 45%,
+    oklch(0.50 0.20 25 / 0.5) 100%
   );
-  --gradient-brand: linear-gradient(120deg, var(--navy), var(--primary) 55%, var(--azure));
+  --gradient-brand: linear-gradient(120deg, #FE0000, #138F13 55%, #030101);
 }
 
 .dark {
-  --background: oklch(0.17 0.04 220);
-  --foreground: oklch(0.97 0.006 220);
-  --card: oklch(0.22 0.05 220);
-  --card-foreground: oklch(0.97 0.006 220);
-  --popover: oklch(0.22 0.05 220);
-  --popover-foreground: oklch(0.97 0.006 220);
-  --primary: oklch(0.65 0.15 210);
-  --primary-foreground: oklch(0.16 0.04 220);
-  --secondary: oklch(0.27 0.05 220);
-  --secondary-foreground: oklch(0.97 0.006 220);
-  --muted: oklch(0.27 0.05 220);
-  --muted-foreground: oklch(0.72 0.03 215);
-  --accent: oklch(0.3 0.06 200);
-  --accent-foreground: oklch(0.97 0.006 220);
+  --background: oklch(0.12 0.01 0);
+  --foreground: oklch(0.97 0.006 0);
+  --card: oklch(0.17 0.01 0);
+  --card-foreground: oklch(0.97 0.006 0);
+  --popover: oklch(0.17 0.01 0);
+  --popover-foreground: oklch(0.97 0.006 0);
+  --primary: oklch(0.65 0.25 10);
+  --primary-foreground: oklch(0.12 0.01 0);
+  --secondary: oklch(0.55 0.18 140);
+  --secondary-foreground: oklch(0.97 0.006 0);
+  --muted: oklch(0.27 0.01 0);
+  --muted-foreground: oklch(0.72 0.02 0);
+  --accent: oklch(0.95 0.01 0);
+  --accent-foreground: oklch(0.12 0.01 0);
   --border: oklch(1 0 0 / 12%);
   --input: oklch(1 0 0 / 16%);
-  --ring: oklch(0.65 0.15 210);
-  --navy: oklch(0.2 0.06 220);
-  --navy-foreground: oklch(0.98 0.005 220);
+  --ring: oklch(0.65 0.25 10);
+  --navy: oklch(0.03 0.01 0);
+  --navy-foreground: oklch(0.98 0.005 0);
 }
 
 @layer base {
@@ -141,7 +140,7 @@
 }
 
 @utility text-gradient {
-  background-image: linear-gradient(100deg, var(--azure), oklch(0.82 0.09 220));
+  background-image: linear-gradient(100deg, #FE0000, #138F13 45%, #FE0000);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -160,6 +159,10 @@
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--primary);
+}
+
+@utility text-on-secondary {
+  color: oklch(0.99 0.005 0);
 }
 
 @utility card-lift {
@@ -423,16 +426,16 @@
 }
 
 @utility ribbon-stripes {
-  /* Ribbon colour order: ocean-blue → sky-azure → mangrove-teal → coastal-sand → forest-green → moss-green → ocean-blue */
+  /* Ribbon colour order: Red → Green → Black → White (Alpha & Omega CBO Kenya brand) */
   background-image: repeating-linear-gradient(
     115deg,
-    var(--primary) 0 26px,
-    var(--azure) 26px 52px,
-    var(--teal) 52px 78px,
-    var(--sand) 78px 104px,
-    var(--coral) 104px 130px,
-    oklch(0.50 0.12 145) 130px 156px,
-    var(--primary) 156px 182px
+    #FE0000 0 26px,
+    #138F13 26px 52px,
+    #030101 52px 78px,
+    #FFFFFF 78px 104px,
+    #FE0000 104px 130px,
+    #138F13 130px 156px,
+    #030101 156px 182px
   );
   background-size: 200px 100%;
   animation: ribbon-run 6s linear infinite;

@@ -12,7 +12,7 @@ export function IntroSplash() {
   useEffect(() => {
     setMounted(true);
     try {
-      if (!sessionStorage.getItem("bigship-intro-seen")) setOpen(true);
+      if (!sessionStorage.getItem("alpha-omega-intro-seen")) setOpen(true);
     } catch {
       /* storage blocked — skip the intro */
     }
@@ -28,7 +28,7 @@ export function IntroSplash() {
 
   const dismiss = () => {
     try {
-      sessionStorage.setItem("bigship-intro-seen", "1");
+      sessionStorage.setItem("alpha-omega-intro-seen", "1");
     } catch {
       /* ignore */
     }
@@ -41,29 +41,30 @@ export function IntroSplash() {
   return (
     <div
       data-leaving={leaving}
-      className="intro-gate brand-gradient fixed inset-0 z-[100] grid place-items-center px-6 text-navy-foreground"
+      className="intro-gate brand-gradient fixed inset-0 z-[100] grid place-items-center px-6 text-white"
     >
       <div aria-hidden className="absolute inset-0 opacity-40">
-        <span className="float-slow absolute top-1/4 left-[12%] size-72 rounded-full bg-azure/30 blur-3xl" />
-        <span className="float-slow absolute bottom-[15%] right-[10%] size-80 rounded-full bg-coral/25 blur-3xl" />
+        <span className="float-slow absolute top-1/4 left-[12%] size-72 rounded-full bg-red-500/30 blur-3xl" />
+        <span className="float-slow absolute bottom-[15%] right-[10%] size-80 rounded-full bg-green-500/25 blur-3xl" />
       </div>
       <div className="intro-inner relative max-w-xl text-center">
-        <span className="eyebrow text-azure">Welcome · Karibu Mombasa</span>
-        <h1 className="mt-5 font-display text-4xl font-bold sm:text-5xl">
-          Welcome to <span className="text-gradient">Big Ship C.B.O.</span>
+        <span className="eyebrow text-white">Welcome · Karibu Mombasa</span>
+        <h1 className="mt-5 font-display text-4xl font-bold sm:text-5xl text-white">
+          Welcome to <span className="text-gradient">Alpha &amp; Omega CBO Kenya</span>
         </h1>
-        <p className="mx-auto mt-5 max-w-md text-sm leading-relaxed text-navy-foreground/80">
-          Community-led environmental conservation and livelihoods development. Explore our work in 
-          mangrove restoration, waste recovery, and coastal resilience in Mombasa.
+        <p className="mx-auto mt-5 max-w-md text-sm leading-relaxed text-white/90">
+          Youth-led community organization rooted in Bangladesh Slums, Mikindani Ward, Mombasa.
+          We support women, girls, and young people through mentorship, rights awareness,
+          civic participation, and community action.
         </p>
         <button
           onClick={dismiss}
-          className="group mt-9 inline-flex items-center gap-2 rounded-full bg-white px-9 py-3.5 text-sm font-semibold text-navy shadow-lift transition-transform hover:-translate-y-0.5"
+          className="group mt-9 inline-flex items-center gap-2 rounded-full bg-white px-9 py-3.5 text-sm font-semibold text-primary shadow-lift transition-transform hover:-translate-y-0.5"
         >
           Continue
           <span className="transition-transform group-hover:translate-x-1">→</span>
         </button>
-        <p className="mt-4 text-[0.7rem] tracking-[0.2em] uppercase text-navy-foreground/50">
+        <p className="mt-4 text-[0.7rem] tracking-[0.2em] uppercase text-white/70">
           Click continue to explore the site
         </p>
       </div>

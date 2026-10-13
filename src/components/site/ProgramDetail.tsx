@@ -56,12 +56,12 @@ export function ProgramDetail({
 
           <aside className="space-y-6">
             <Reveal className="pattern-card rounded-3xl border border-border bg-secondary p-6 sm:p-7">
-              <h2 className="font-display text-lg font-semibold">Programme details</h2>
+              <h2 className="font-display text-lg font-semibold text-white">Programme details</h2>
               <dl className="mt-5 space-y-4 text-sm">
                 {details.map(([k, v]) => (
-                  <div key={k} className="flex justify-between gap-4 border-b border-border pb-3">
-                    <dt className="text-muted-foreground">{k}</dt>
-                    <dd className="text-right font-medium">{v}</dd>
+                  <div key={k} className="flex justify-between gap-4 border-b border-white/20 pb-3">
+                    <dt className="text-white/80">{k}</dt>
+                    <dd className="text-right font-medium text-white">{v}</dd>
                   </div>
                 ))}
               </dl>

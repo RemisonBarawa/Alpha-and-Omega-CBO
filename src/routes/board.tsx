@@ -7,25 +7,25 @@ import { IMG } from "@/lib/images";
 export const Route = createFileRoute("/board")({
   head: () => ({
     meta: [
-      { title: "Board Members | Big Ship C.B.O." },
+      { title: "Board Members | Alpha & Omega CBO Kenya" },
       {
         name: "description",
         content:
-          "Meet the dedicated team and board members driving Big Ship C.B.O.'s mission for environmental conservation and community empowerment in coastal Mombasa.",
+          "Meet the leadership of Alpha & Omega CBO Kenya, founded by Victor Nando Odongo in Bangladesh Slums, Mombasa.",
       },
-      { property: "og:title", content: "Board Members | Big Ship C.B.O." },
+      { property: "og:title", content: "Board Members | Alpha & Omega CBO Kenya" },
       {
         property: "og:description",
-        content: "Leadership driving mangrove restoration, waste recovery, and community resilience in Mombasa.",
+        content: "Leadership of Alpha & Omega CBO Kenya, founded by Victor Nando Odongo in Bangladesh Slums, Mombasa.",
       },
-      { property: "og:image", content: "https://big-ship-org.netlify.app/big-ship-logo.png" },
+      { property: "og:image", content: "https://alphaandomegacbokenya.netlify.app/big-ship-logo.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Board Members | Big Ship C.B.O." },
+      { name: "twitter:title", content: "Board Members | Alpha & Omega CBO Kenya" },
       {
         name: "twitter:description",
-        content: "Meet the team stewarding Big Ship C.B.O.'s conservation mission.",
+        content: "Meet the team behind Alpha & Omega CBO Kenya in Bangladesh Slums, Mombasa.",
       },
-      { name: "twitter:image", content: "https://big-ship-org.netlify.app/big-ship-logo.png" },
+      { name: "twitter:image", content: "https://alphaandomegacbokenya.netlify.app/big-ship-logo.png" },
     ],
   }),
   component: BoardPage,
@@ -33,39 +33,25 @@ export const Route = createFileRoute("/board")({
 
 const leadership = [
   {
-    initials: "BJ",
-    name: "Bosco Juma",
-    role: "Founding Director / Executive Director",
-    bio: "Founder and main director of Big Ship CBO with over a decade of experience working with coastal communities on mangrove restoration, environmental conservation, youth empowerment, and sustainable livelihoods. YALI alumnus with training in environmental conservation and business development.",
-    tags: ["Environmental Conservation", "Community Development", "Strategic Leadership"],
+    initials: "VO",
+    name: "Victor Nando Odongo",
+    role: "Chairman / Founder",
+    bio: "Victor Nando Odongo founded Alpha & Omega CBO Kenya in Bangladesh Slums, Mikindani Ward, Jomvu Sub-County. Under his leadership the organization was recognized by HURIA Human Rights Lab in 2019, spotlighted by SHOFCO in 2024, and became a Community Hub through the DARAJA Project in 2025. Victor was featured in an independent leadership profile in 2024.",
+    tags: ["Community Leadership", "Human Rights", "Youth Empowerment"],
   },
   {
-    initials: "LA",
-    name: "Lucian Adhiambo",
-    role: "Urban & Resilience Strategist",
-    bio: "Social and community development professional with formal training in project management and procurement/supplies. Responsible for program planning, coordination, and implementation of Big Ship's community and environmental initiatives.",
-    tags: ["Program Management", "Project Coordination", "Community Development"],
+    initials: "TBA",
+    name: "To be announced",
+    role: "Board Member",
+    bio: "Additional board and team member details will be published when confirmed.",
+    tags: [],
   },
   {
-    initials: "DM",
-    name: "Daniel Mulandi",
-    role: "Administrative Accountant",
-    bio: "Economist and finance graduate responsible for financial oversight and accounting functions within the organization, ensuring transparency and accountability.",
-    tags: ["Financial Management", "Accounting", "Economics"],
-  },
-  {
-    initials: "JM",
-    name: "Jimmy Mwaita",
-    role: "Monitoring & Evaluation Officer",
-    bio: "Specialist in monitoring and evaluation and human resource graduate, tasked with tracking program outcomes and institutional performance to ensure effective implementation.",
-    tags: ["M&E", "Performance Tracking", "Human Resources"],
-  },
-  {
-    initials: "AN",
-    name: "Agatha Nafula",
-    role: "Environment & Climate Change Officer",
-    bio: "Research associate with a Bachelor of Science in Natural Resource Management, focusing on environmental research and climate response activities.",
-    tags: ["Environmental Research", "Climate Change", "Natural Resource Management"],
+    initials: "TBA",
+    name: "To be announced",
+    role: "Board Member",
+    bio: "Additional board and team member details will be published when confirmed.",
+    tags: [],
   },
 ];
 
@@ -74,13 +60,13 @@ function BoardPage() {
     <>
       <PageHero
         eyebrow="Leadership"
-        title="Meet the dedicated team driving our mission forward"
-        body="Experienced professionals committed to environmental conservation, community empowerment, and sustainable development in coastal Mombasa."
+        title="The team behind Alpha & Omega CBO Kenya"
+        body="Alpha & Omega CBO Kenya is led by its founder and community champions from Bangladesh Slums, Mikindani Ward."
         image={IMG.mentor}
         stats={[
-          ["5", "Team members"],
-          ["10+", "Years of experience"],
-          ["2018", "Founded locally"],
+          ["2019",    "Founded"],
+          ["Mombasa", "Bangladesh Slums, Jomvu"],
+          ["5",       "Programs"],
         ]}
       />
 
@@ -89,14 +75,14 @@ function BoardPage() {
           <Reveal>
             <span className="eyebrow">Leadership Team</span>
             <h2 className="mt-4 text-2xl font-bold sm:text-3xl">
-              Experienced professionals committed to our mission
+              Community champions committed to our mission
             </h2>
           </Reveal>
 
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {leadership.map((m, i) => (
               <Reveal
-                key={m.name}
+                key={m.name + i}
                 delay={i * 90}
                 className="card-lift pattern-card group rounded-3xl border border-border bg-card p-6 sm:p-7"
               >
@@ -112,16 +98,18 @@ function BoardPage() {
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{m.bio}</p>
 
                 {/* Skill tags */}
-                <div className="mt-4 flex flex-wrap gap-2">
-                  {m.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="rounded-full bg-primary/8 px-2.5 py-1 text-[0.65rem] font-semibold text-primary"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
+                {m.tags.length > 0 && (
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    {m.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="rounded-full bg-primary/8 px-2.5 py-1 text-[0.65rem] font-semibold text-primary"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                )}
               </Reveal>
             ))}
           </div>
@@ -130,8 +118,8 @@ function BoardPage() {
 
       <CtaBand
         eyebrow="Partner"
-        title="Partner with Big Ship C.B.O."
-        body="We're looking for conservation partners, funders, and community collaborators to expand our environmental impact in coastal Mombasa."
+        title="Partner with Alpha & Omega CBO Kenya"
+        body="We welcome partners, funders, and community collaborators committed to empowerment in Mombasa."
         primary={{ to: "/contact", label: "Let's talk" }}
         secondary={{ to: "/impact", label: "See our impact" }}
       />

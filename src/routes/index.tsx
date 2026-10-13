@@ -14,101 +14,132 @@ import { getProgramAltText } from "@/lib/altText";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Home | Big Ship C.B.O." },
+      { title: "Home | Alpha & Omega CBO Kenya" },
       {
         name: "description",
         content:
-          "Big Ship C.B.O. drives community-led mangrove restoration, waste recovery, and urban resilience programs in Mombasa, Kenya since 2018.",
+          "Alpha & Omega CBO Kenya — youth-led organization in Bangladesh Slums, Mikindani Ward, Mombasa, supporting women, girls, and young people.",
       },
-      { property: "og:title", content: "Big Ship C.B.O. | Environmental Conservation in Mombasa" },
+      { property: "og:title", content: "Alpha & Omega CBO Kenya | Empower · Educate · Transform" },
       {
         property: "og:description",
         content:
-          "Community-led mangrove restoration, waste recovery, and urban resilience programs since 2018.",
+          "Youth-led CBO in Mombasa supporting women, girls, and young people through mentorship, rights awareness, civic participation, and community action.",
       },
-      { property: "og:image", content: "https://big-ship-org.netlify.app/big-ship-logo.png" },
+      { property: "og:image", content: "https://alphaandomegacbokenya.netlify.app/big-ship-logo.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Big Ship C.B.O. | Environmental Conservation in Mombasa" },
+      { name: "twitter:title", content: "Alpha & Omega CBO Kenya | Empower · Educate · Transform" },
       {
         name: "twitter:description",
         content:
-          "Community-led mangrove restoration, waste recovery, and urban resilience programs since 2018.",
+          "Youth-led CBO in Mombasa supporting women, girls, and young people through mentorship, rights awareness, civic participation, and community action.",
       },
-      { name: "twitter:image", content: "https://big-ship-org.netlify.app/big-ship-logo.png" },
+      { name: "twitter:image", content: "https://alphaandomegacbokenya.netlify.app/big-ship-logo.png" },
     ],
   }),
   component: Index,
 });
 
 const marquee = [
-  "Community Impact Since 2018",
-  "Big Ship C.B.O.",
-  "Mombasa, Kenya",
-  "Celebrating Youth",
-  "Mombasa, Kenya",
-  "Technology · Arts · Enterprise",
+  "Alpha & Omega CBO Kenya",
+  "Bangladesh Slums · Mombasa",
+  "Empower | Educate | Transforming Lives",
+  "Founded 2019",
+  "Mentorship · Rights · Civic Action",
+  "Mikindani Ward · Jomvu Sub-County",
 ];
 
 const approach = [
   {
     n: "01",
     icon: Compass,
-    title: "Community Listen",
-    body: "We engage local communities to understand coastal challenges and identify restoration priorities.",
+    title: "Engage",
+    body: "We listen to and learn from the community — understanding the challenges facing women, girls, and young people in Bangladesh Slums.",
   },
   {
     n: "02",
     icon: Sparkles,
-    title: "Plan & Prepare",
-    body: "Structured planning ensures successful seedling preparation, site selection, and community readiness.",
+    title: "Mentor",
+    body: "Structured mentorship circles, workshops, and one-on-one support equip participants with skills, confidence, and knowledge.",
   },
   {
     n: "03",
     icon: HeartHandshake,
-    title: "Plant & Protect",
-    body: "Community members lead planting activities with ongoing mentorship and ecosystem monitoring support.",
+    title: "Mobilize",
+    body: "We organize community members to advocate for their rights, participate in civic processes, and act on shared challenges.",
   },
   {
     n: "04",
     icon: Rocket,
-    title: "Monitor & Scale",
-    body: "Long-term monitoring through Mikoko Watch and adaptive management ensures lasting environmental impact.",
+    title: "Sustain",
+    body: "Partnerships with HURIA, SHOFCO, DAYOK, and the DARAJA Project ensure long-term support and community-led ownership.",
   },
 ];
 
 const programs = [
   {
     img: IMG.tech,
-    tag: "Mazira",
-    kicker: "RESTORATION · ONGOING",
-    title: "Adopt A Site",
-    body: "Community-led mangrove restoration with ecosystem monitoring and Mikoko Watch participation.",
-    to: "/programs/adopt-a-site" as const,
+    tag: "Mentorship",
+    kicker: "GIRL CHILD · ONGOING",
+    title: "Girl Child Mentorship & Empowerment",
+    body: "Mentoring girls in Bangladesh Slums to stay in school, build confidence, and access the Pad Bank.",
+    to: "/programs/girl-child-mentorship" as const,
   },
   {
     img: IMG.arts,
-    tag: "RECO",
-    kicker: "WASTE RECOVERY · ONGOING",
-    title: "RECO/Yogurt Forest",
-    body: "Creative waste recovery program transforming yoghurt cups into reforestation seedling containers.",
-    to: "/programs/reco-yogurt-forest" as const,
+    tag: "Empowerment",
+    kicker: "WOMEN · ONGOING",
+    title: "Women's Empowerment & Mentorship",
+    body: "Structured mentorship and livelihood training for women in Mikindani Ward.",
+    to: "/programs/womens-empowerment" as const,
   },
   {
     img: IMG.business,
-    tag: "Akili",
-    kicker: "RESILIENCE · ONGOING",
-    title: "Urban Resilience & Skills",
-    body: "Youth livelihoods, women's empowerment, and community-based adaptation in coastal neighborhoods.",
-    to: "/programs/urban-resilience" as const,
+    tag: "Civic",
+    kicker: "YOUTH VOICE · ONGOING",
+    title: "Youth Voice & Civic Participation",
+    body: "Engaging young people in civic forums and community decision-making with SHOFCO.",
+    to: "/programs/youth-voice" as const,
+  },
+  {
+    img: IMG.community,
+    tag: "Rights",
+    kicker: "HUMAN RIGHTS · ONGOING",
+    title: "Human Rights & Socio-economic Rights",
+    body: "Rights awareness and socio-economic advocacy in partnership with HURIA Human Rights Lab.",
+    to: "/programs/human-rights" as const,
+  },
+  {
+    img: IMG.hero,
+    tag: "Climate",
+    kicker: "COMMUNITY ACTION · ONGOING",
+    title: "Climate & Community Action",
+    body: "Community resilience and climate action as a DARAJA Project Community Hub.",
+    to: "/programs/climate-action" as const,
   },
 ];
 
 const milestones = [
-  { year: "2018", label: "Founded", body: "Big Ship C.B.O. established with focus on environmental conservation and community resilience." },
-  { year: "2019", label: "Adopt A Site", body: "Launched mangrove restoration programs around Tudor Creek, Mikindani, and Ganahola." },
-  { year: "2020", label: "RECO Campaign", body: "Introduced yogurt cup waste recovery and reforestation initiative." },
-  { year: "2021", label: "Expanded", body: "Urban Resilience & Skills Development program launched." },
-  { year: "2024", label: "Growing", body: "Continuing community-led conservation across Mombasa." },
+  {
+    year: "2019",
+    label: "HURIA Partnership",
+    body: "HURIA Human Rights Lab identified Alpha & Omega as a mentee organization addressing socio-economic rights in Jomvu Sub-County.",
+  },
+  {
+    year: "2023",
+    label: "Women's Empowerment Featured",
+    body: "Women's Empowerment and Mentorship program publicly featured; Pad Bank launched under Girl Child Mentorship program.",
+  },
+  {
+    year: "2024",
+    label: "SHOFCO Spotlight",
+    body: "Shining Hope for Communities spotlighted Alpha & Omega as youth-voice partner; Victor Nando Odongo featured in leadership profile.",
+  },
+  {
+    year: "2025",
+    label: "Community Hub",
+    body: "DARAJA Project MoU signed with Dream Achievers Youth Organization Kenya; Alpha & Omega became a Community Hub.",
+  },
 ];
 
 function Index() {
@@ -123,7 +154,7 @@ function Index() {
         >
           <img
             src={IMG.hero}
-            alt="Community members collaborating at Big Ship C.B.O. in Mombasa"
+            alt="Community members at Alpha & Omega CBO Kenya in Bangladesh Slums, Mombasa"
             width={1920}
             height={1080}
             className="ken-burns size-full scale-110 object-cover"
@@ -132,72 +163,71 @@ function Index() {
         <div className="hero-overlay absolute inset-0" />
         <div className="relative mx-auto flex max-w-7xl flex-col gap-10 px-6 py-16 text-navy-foreground sm:gap-14 sm:py-24 md:py-36">
           <div className="grid items-center gap-9 lg:grid-cols-[1.1fr_0.9fr]">
-          <div className="max-w-3xl">
+            <div className="max-w-3xl">
 
-            <Reveal>
-              <span className="inline-flex items-center gap-2 rounded-full bg-white/12 px-4 py-1.5 text-[0.68rem] font-semibold tracking-[0.2em] uppercase backdrop-blur">
-                Community-Led Conservation
-              </span>
-            </Reveal>
-            <Reveal delay={120}>
-              <h1 className="mt-6 text-[2rem] leading-[1.08] font-bold sm:text-6xl lg:text-7xl">
-                Restoring Ecosystems, <span className="text-shine">Empowering Communities</span>
-              </h1>
-            </Reveal>
-            <Reveal delay={220}>
-              <p className="mt-6 max-w-xl text-base text-navy-foreground/85 sm:text-lg">
-                Big Ship C.B.O. drives mangrove restoration, waste recovery, and urban resilience through community-led initiatives in Mombasa.
-              </p>
-            </Reveal>
-            <Reveal delay={320}>
-              <div className="mt-9 flex flex-wrap gap-3">
-                <Link
-                  to="/programs"
-                  className="group inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-primary-foreground shadow-lift transition-transform hover:-translate-y-0.5"
-                >
-                  Discover Programs
-                  <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
-                </Link>
-                <Link
-                  to="/about"
-                  className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-7 py-3.5 text-sm font-semibold backdrop-blur transition-colors hover:bg-white/20"
-                >
-                  Our Story
-                </Link>
-              </div>
-            </Reveal>
-          </div>
-
-            <Reveal delay={260}>
-              <LogoVideoCard
-                src="/bigship_logo_emergence.mp4"
-                poster="/Big%20Ship%20Logo.jpg"
-                fallbackImage="/Big%20Ship%20Logo.jpg"
-                aspect="3 / 2"
-                className="float-slow"
-              >
-                <div className="flex items-center justify-between gap-3 border-t border-white/10 px-5 py-4">
-                  <p className="text-[0.68rem] font-semibold tracking-[0.22em] uppercase text-azure">
-                    Est. 2018 · Mombasa
-                  </p>
-                  <p className="font-display text-sm">Big Ship C.B.O.</p>
+              <Reveal>
+                <span className="inline-flex items-center gap-2 rounded-full bg-white/12 px-4 py-1.5 text-[0.68rem] font-semibold tracking-[0.2em] uppercase backdrop-blur">
+                  Youth-Led · Community-Rooted
+                </span>
+              </Reveal>
+              <Reveal delay={120}>
+                <h1 className="mt-6 text-[2rem] leading-[1.08] font-bold sm:text-6xl lg:text-7xl">
+                  Empowering young people. Educating communities. <span className="text-shine">Transforming lives.</span>
+                </h1>
+              </Reveal>
+              <Reveal delay={220}>
+                <p className="mt-6 max-w-xl text-base text-navy-foreground/85 sm:text-lg">
+                  Alpha &amp; Omega CBO Kenya is a youth-led community organization rooted in Bangladesh Slums, Mikindani Ward, Mombasa County. We support women, girls, and young people through mentorship, rights awareness, civic participation, and community action.
+                </p>
+              </Reveal>
+              <Reveal delay={320}>
+                <div className="mt-9 flex flex-wrap gap-3">
+                  <Link
+                    to="/contact"
+                    className="group inline-flex items-center gap-2 rounded-full bg-primary px-7 py-3.5 text-sm font-semibold text-primary-foreground shadow-lift transition-transform hover:-translate-y-0.5"
+                  >
+                    Partner with us
+                    <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
+                  </Link>
+                  <Link
+                    to="/programs"
+                    className="inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/10 px-7 py-3.5 text-sm font-semibold backdrop-blur transition-colors hover:bg-white/20"
+                  >
+                    Support a program
+                  </Link>
                 </div>
-              </LogoVideoCard>
-            </Reveal>
+              </Reveal>
+            </div>
+            <div>
+              <Reveal delay={260}>
+                <LogoVideoCard
+                  src="/logos/alpha_omega_logo_emergence.mp4"
+                  poster="/logos/Alpha and Omega Logo.jpg"
+                  fallbackImage="/logos/Alpha and Omega Logo.jpg"
+                  aspect="3 / 2"
+                  className="float-slow"
+                >
+                  <div className="flex items-center justify-between gap-3 border-t border-white/10 px-5 py-4">
+                    <p className="text-[0.68rem] font-semibold tracking-[0.22em] uppercase text-primary">
+                      Est. 2019 · Bangladesh Slums, Mombasa
+                    </p>
+                    <p className="font-display text-sm text-white">Alpha &amp; Omega CBO Kenya</p>
+                  </div>
+                </LogoVideoCard>
+              </Reveal>
+            </div>
           </div>
-
-
 
           <div className="grid gap-4 md:grid-cols-2">
             <Reveal delay={120} className="rounded-3xl border border-white/15 bg-white/10 p-6 backdrop-blur-md sm:p-7">
               <h2 className="text-xs font-semibold tracking-[0.2em] text-azure uppercase">Mission</h2>
               <p className="mt-3 text-sm leading-relaxed text-navy-foreground/85">
-                To drive sustainable environmental conservation through mangrove restoration, waste recovery, and community-led resilience building in coastal Mombasa.
+                To empower women, girls, and young people in Bangladesh Slums through mentorship, rights awareness, civic participation, and community action.
               </p>
             </Reveal>
             <Reveal delay={220} className="rounded-3xl border border-white/15 bg-navy/60 p-6 backdrop-blur-md sm:p-7">
               <h2 className="text-xs font-semibold tracking-[0.2em] text-coral uppercase">Vision</h2>
-              <p className="mt-3 font-display text-2xl">Thriving ecosystems, empowered communities.</p>
+              <p className="mt-3 font-display text-2xl">Empowered youth, resilient communities.</p>
             </Reveal>
           </div>
 
@@ -229,16 +259,16 @@ function Index() {
         <div className="mx-auto grid max-w-7xl items-center gap-14 px-6 lg:grid-cols-2">
           <div>
             <Reveal>
-              <span className="eyebrow">Community-Led Conservation</span>
+              <span className="eyebrow">Community-Led Empowerment</span>
             </Reveal>
             <Reveal delay={100}>
               <h2 className="mt-4 text-3xl font-bold sm:text-4xl">
-                Building environmental impact in Mombasa
+                Building community impact in Bangladesh Slums since 2019
               </h2>
             </Reveal>
             <Reveal delay={180}>
               <p className="mt-5 text-muted-foreground">
-                Since 2018, Big Ship C.B.O. has been driving community-led mangrove restoration, waste recovery initiatives, and urban resilience programs across Mombasa's coastal communities.
+                Alpha &amp; Omega CBO Kenya delivers five integrated programs combining mentorship, rights awareness, civic participation, and community action for women, girls, and young people in Mombasa.
               </p>
             </Reveal>
             <Reveal delay={260}>
@@ -253,20 +283,20 @@ function Index() {
           </div>
           <Reveal delay={160} className="relative">
             <LogoVideoCard
-              src="/bigship_logo_emergence.mp4"
-              poster="/Big%20Ship%20Logo.jpg"
-              fallbackImage="/Big%20Ship%20Logo.jpg"
+              src="/logos/alpha_omega_logo_emergence.mp4"
+              poster="/logos/Alpha and Omega Logo.jpg"
+              fallbackImage="/logos/Alpha and Omega Logo.jpg"
               aspect="16 / 9"
             >
-              <div className="flex items-center justify-between gap-3 border-t border-white/10 px-5 py-4 text-navy-foreground">
-                <p className="font-display text-lg font-semibold">Environmental Impact</p>
-                <p className="text-[0.68rem] font-semibold tracking-[0.22em] uppercase text-azure">
-                  2018 — Present
+              <div className="flex items-center justify-between gap-3 border-t border-white/10 px-5 py-4 text-white">
+                <p className="font-display text-lg font-semibold">Community Impact</p>
+                <p className="text-[0.68rem] font-semibold tracking-[0.22em] uppercase text-primary">
+                  2019 — Present
                 </p>
               </div>
             </LogoVideoCard>
             <div className="mt-8 flex items-center justify-between text-xs font-semibold tracking-[0.2em] uppercase text-muted-foreground">
-              <span>2018 · Founded</span>
+              <span>2019 · Founded</span>
               <span className="mx-4 h-px flex-1 bg-border" />
               <span className="text-primary">Present · Growing</span>
             </div>
@@ -279,31 +309,33 @@ function Index() {
         <div className="mx-auto max-w-7xl px-6 py-20">
           <Reveal>
             <span className="eyebrow text-azure">By The Numbers</span>
-            <h2 className="mt-4 text-3xl font-bold sm:text-4xl">Years of measurable impact</h2>
+            <h2 className="mt-4 text-3xl font-bold sm:text-4xl">Measurable community impact</h2>
           </Reveal>
           <div className="mt-12 grid gap-6 sm:grid-cols-3">
             {[
               {
-                to: 500,
-                label: "Mangrove seedlings planted",
-                source: "Big Ship C.B.O. records, 2018–2024",
-                status: "documented" as const,
-                tag: "Planted",
-              },
-              {
-                to: 150,
-                label: "Community members reportedly engaged",
-                source: "Program participant logs; self-reported",
-                status: "reported" as const,
-                tag: "Engaged",
-              },
-              {
-                to: 3,
-                label: "Active restoration sites",
-                source: "Big Ship C.B.O. site records, 2024",
+                to: 5,
+                label: "Active programs",
+                source: "Alpha & Omega CBO Kenya program register, 2025",
                 status: "verified" as const,
                 suffix: "",
-                tag: "Sites",
+                tag: "Programs",
+              },
+              {
+                to: 4,
+                label: "Named partner organizations",
+                source: "Partnership agreements 2019–2025",
+                status: "documented" as const,
+                suffix: "",
+                tag: "Partners",
+              },
+              {
+                to: 2019,
+                label: "Year founded",
+                source: "HURIA Human Rights Lab records, 2019",
+                status: "verified" as const,
+                suffix: "",
+                tag: "Founded",
               },
             ].map((stat, i) => (
               <Reveal
@@ -316,18 +348,26 @@ function Index() {
                   label={stat.label}
                   source={stat.source}
                   status={stat.status}
-                  suffix={stat.suffix !== undefined ? stat.suffix : "+"}
+                  suffix={stat.suffix}
                   counterClassName="text-azure sm:text-5xl"
                 />
               </Reveal>
             ))}
           </div>
+          <Reveal delay={200} className="mt-12 rounded-3xl border border-white/12 bg-white/5 p-8">
+            <p className="font-display text-2xl sm:text-3xl text-white">
+              Growing community empowerment in Bangladesh Slums, Mombasa.
+            </p>
+            <p className="mt-3 max-w-2xl text-sm text-white/80">
+              Our commitment to mentorship, rights awareness, civic participation, and community action continues to grow with every program cycle and community partnership.
+            </p>
+          </Reveal>
           <Reveal delay={200} className="mt-12 rounded-3xl border border-white/12 p-8">
             <p className="font-display text-2xl sm:text-3xl">
-              Growing environmental impact in Mombasa.
+              Growing community empowerment in Bangladesh Slums, Mombasa.
             </p>
             <p className="mt-3 max-w-2xl text-sm text-navy-foreground/70">
-              Our commitment to coastal ecosystem restoration and community empowerment continues to grow with each planting season and community initiative.
+              Our commitment to mentorship, rights awareness, civic participation, and community action continues to grow with every program cycle and community partnership.
             </p>
           </Reveal>
         </div>
@@ -337,9 +377,9 @@ function Index() {
         <div className="mx-auto max-w-7xl px-6">
           <Reveal>
             <span className="eyebrow">Our Journey</span>
-            <h2 className="mt-4 text-3xl font-bold sm:text-4xl">Five milestones, one mission</h2>
+            <h2 className="mt-4 text-3xl font-bold sm:text-4xl">Four milestones, one mission</h2>
           </Reveal>
-          <ol className="mt-12 grid gap-6 md:grid-cols-5">
+          <ol className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
             {milestones.map((m, i) => (
               <Reveal
                 as="li"
@@ -364,7 +404,7 @@ function Index() {
             <span className="eyebrow">How We Work</span>
             <h2 className="mt-4 text-3xl font-bold sm:text-4xl">Our approach</h2>
             <p className="mt-4 max-w-2xl text-muted-foreground">
-              A four-step model integrating community participation, scientific planning, active restoration, and long-term monitoring.
+              A four-step community-rooted model for lasting empowerment and systemic change.
             </p>
           </Reveal>
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -388,16 +428,15 @@ function Index() {
           <Reveal delay={180} className="pattern-card mt-10 grid gap-6 rounded-3xl border border-border bg-card p-8 lg:grid-cols-2">
             <blockquote>
               <p className="font-display text-xl leading-relaxed">
-                “The approach here is different. They don't just train you — they stay with you until
-                you make it.”
+                "[Placeholder — a verified testimonial will be added when available]"
               </p>
               <footer className="mt-5 flex items-center gap-3">
                 <span className="grid size-10 place-items-center rounded-full bg-primary/12 text-sm font-bold text-primary">
-                  JM
+                  AO
                 </span>
                 <span className="text-sm">
-                  <span className="block font-semibold">Jane Mwangi</span>
-                  <span className="text-muted-foreground">Adopt A Site · Tudor Creek</span>
+                  <span className="block font-semibold">Community participant</span>
+                  <span className="text-muted-foreground">Alpha &amp; Omega CBO Kenya</span>
                 </span>
               </footer>
             </blockquote>
@@ -405,9 +444,9 @@ function Index() {
               <h3 className="font-display text-lg font-semibold">Why it works</h3>
               <ul className="mt-4 space-y-4 text-sm">
                 {[
-                  ["Community-led", "Local communities guide priorities and lead restoration, creating lasting ownership and stewardship."],
-                  ["Long-term commitment", "We don't plant and leave. Monitoring, maintenance and relationship-building continue for years."],
-                  ["Integrated approach", "Environmental work connects with livelihoods, skills training and climate resilience for holistic community benefit."],
+                  ["Youth-led", "Young people from the community guide priorities, lead programs, and own outcomes."],
+                  ["Gender responsive", "Programs specifically address the needs of women and girls alongside young men."],
+                  ["Rights-based", "All work is grounded in human rights principles, informed by HURIA Human Rights Lab partnership."],
                 ].map(([title, body]) => (
                   <li key={title} className="flex gap-3">
                     <Users className="mt-0.5 size-4 shrink-0 text-primary" />
@@ -429,10 +468,10 @@ function Index() {
             <span className="eyebrow">What We Do</span>
             <h2 className="mt-4 text-3xl font-bold sm:text-4xl">Our programs</h2>
             <p className="mt-4 max-w-2xl text-muted-foreground">
-              Big Ship C.B.O. delivers three integrated programs for community environmental empowerment and coastal resilience.
+              Alpha &amp; Omega CBO Kenya delivers five integrated programs for community empowerment, rights awareness, and civic participation.
             </p>
           </Reveal>
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {programs.map((p, i) => (
               <Reveal key={p.title} delay={i * 120}>
                 <Link
@@ -443,9 +482,7 @@ function Index() {
                     <img
                       src={p.img}
                       alt={getProgramAltText(
-                        p.title.toLowerCase().includes('adopt') ? 'adopt-a-site' : 
-                        p.title.toLowerCase().includes('reco') ? 'reco-yogurt-forest' : 
-                        'urban-resilience'
+                        p.to.replace('/programs/', '')
                       )}
                       loading="lazy"
                       width={1024}
@@ -478,9 +515,9 @@ function Index() {
       <section className="brand-gradient text-navy-foreground">
         <div className="mx-auto flex max-w-7xl flex-col items-start gap-6 px-6 py-16 md:flex-row md:items-center md:justify-between">
           <div>
-            <h2 className="text-2xl font-bold sm:text-3xl">Ready to join the conservation movement?</h2>
+            <h2 className="text-2xl font-bold sm:text-3xl">Ready to join the Alpha &amp; Omega CBO Kenya community?</h2>
             <p className="mt-2 text-sm text-navy-foreground/80">
-              Participate in restoration, support environmental initiatives, or partner with Big Ship C.B.O.
+              Partner with us, support a program, or get involved in Bangladesh Slums, Mombasa.
             </p>
           </div>
           <div className="flex flex-wrap gap-3">
@@ -488,7 +525,7 @@ function Index() {
               to="/contact"
               className="inline-flex items-center gap-2 rounded-full bg-white px-7 py-3.5 text-sm font-semibold text-navy transition-transform hover:-translate-y-0.5"
             >
-              Get in touch
+              Partner with us
             </Link>
             <Link
               to="/events"

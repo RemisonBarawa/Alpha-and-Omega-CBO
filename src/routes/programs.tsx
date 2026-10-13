@@ -5,29 +5,30 @@ import { PageHero } from "@/components/site/PageHero";
 import { IMG } from "@/lib/images";
 import { BrandRibbon } from "@/components/site/LogoVideoCard";
 import { CtaBand } from "@/components/site/CtaBand";
+import { getProgramAltText } from "@/lib/altText";
 
 export const Route = createFileRoute("/programs")({
   head: () => ({
     meta: [
-      { title: "Programs | Big Ship C.B.O." },
+      { title: "Programs | Alpha & Omega CBO Kenya" },
       {
         name: "description",
         content:
-          "Big Ship C.B.O.'s three integrated programs: Adopt A Site mangrove restoration, RECO waste recovery, and urban resilience initiatives.",
+          "Alpha & Omega CBO Kenya's five programs: Girl Child Mentorship, Women's Empowerment, Youth Voice, Human Rights, and Climate Action in Mombasa.",
       },
-      { property: "og:title", content: "Programs | Big Ship C.B.O." },
+      { property: "og:title", content: "Programs | Alpha & Omega CBO Kenya" },
       {
         property: "og:description",
-        content: "Big Ship C.B.O.'s three integrated programs for community environmental conservation and urban resilience in Mombasa.",
+        content: "Five integrated programs for community empowerment, rights awareness, and civic participation in Bangladesh Slums, Mombasa.",
       },
-      { property: "og:image", content: "https://big-ship-org.netlify.app/big-ship-logo.png" },
+      { property: "og:image", content: "https://alphaandomegacbokenya.netlify.app/big-ship-logo.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Programs | Big Ship C.B.O." },
+      { name: "twitter:title", content: "Programs | Alpha & Omega CBO Kenya" },
       {
         name: "twitter:description",
-        content: "Adopt A Site, RECO/Yogurt Forest, and Urban Resilience programs.",
+        content: "Girl Child Mentorship, Women's Empowerment, Youth Voice, Human Rights, and Climate Action programs.",
       },
-      { name: "twitter:image", content: "https://big-ship-org.netlify.app/big-ship-logo.png" },
+      { name: "twitter:image", content: "https://alphaandomegacbokenya.netlify.app/big-ship-logo.png" },
     ],
   }),
   component: ProgramsPage,
@@ -36,29 +37,46 @@ export const Route = createFileRoute("/programs")({
 const programs = [
   {
     img: IMG.tech,
-    title: "Adopt A Site",
-    body: "Community-led mangrove restoration with ecosystem monitoring and climate resilience building across coastal Mombasa.",
-    to: "/programs/adopt-a-site" as const,
+    title: "Girl Child Mentorship & Empowerment",
+    body: "Mentoring girls in Bangladesh Slums to stay in school, build confidence, and access the Pad Bank.",
+    to: "/programs/girl-child-mentorship" as const,
+    id: "girl-child-mentorship",
   },
   {
     img: IMG.arts,
-    title: "RECO/Yogurt Forest",
-    body: "Innovative waste recovery turning discarded yoghurt cups into reforestation seedling containers and environmental education.",
-    to: "/programs/reco-yogurt-forest" as const,
+    title: "Women's Empowerment & Mentorship",
+    body: "Structured mentorship and livelihood training for women in Bangladesh Slums and Mikindani Ward.",
+    to: "/programs/womens-empowerment" as const,
+    id: "womens-empowerment",
   },
   {
     img: IMG.business,
-    title: "Urban Resilience & Skills",
-    body: "Youth livelihoods training, women's empowerment, and community organizing in coastal neighborhoods.",
-    to: "/programs/urban-resilience" as const,
+    title: "Youth Voice & Civic Participation",
+    body: "Equipping young people in Jomvu Sub-County to engage in civic processes and community decision-making.",
+    to: "/programs/youth-voice" as const,
+    id: "youth-voice",
+  },
+  {
+    img: IMG.community,
+    title: "Human Rights & Socio-economic Rights",
+    body: "Rights awareness and socio-economic advocacy in partnership with HURIA Human Rights Lab.",
+    to: "/programs/human-rights" as const,
+    id: "human-rights",
+  },
+  {
+    img: IMG.hero,
+    title: "Climate & Community Action",
+    body: "Community resilience and climate action as a DARAJA Project Community Hub in Mikindani Ward.",
+    to: "/programs/climate-action" as const,
+    id: "climate-action",
   },
 ];
 
 const support = [
-  ["Community Partnerships", "Collaboration with local organizations, Kenya Forest Service, and environmental networks."],
-  ["Technical Support", "Scientific expertise in mangrove restoration, monitoring, and ecosystem management."],
-  ["Skills Training", "Livelihood development, leadership training, and capacity building for community members."],
-  ["Ongoing Monitoring", "Long-term environmental monitoring through community-based Mikoko Watch initiative."],
+  ["Mentorship Networks",   "One-on-one and group mentorship for girls, women, and young people through all five programs."],
+  ["Rights & Advocacy",     "Legal literacy training, rights documentation, and community advocacy in partnership with HURIA Human Rights Lab."],
+  ["Civic Participation",   "Structured forums and youth dialogues engaging community members in local governance and civic processes."],
+  ["Community Action",      "Collective resilience projects, climate risk mapping, and partnership activities as a DARAJA Project Community Hub."],
 ];
 
 function ProgramsPage() {
@@ -66,18 +84,18 @@ function ProgramsPage() {
     <>
       <PageHero
         eyebrow="What We Do"
-        title="Environmental programs for coastal Mombasa"
-        body="Three integrated programs combining mangrove restoration, waste recovery innovation, and community resilience building."
+        title="Five programs for community empowerment in Mombasa"
+        body="Five integrated programs combining mentorship, rights awareness, civic participation, and community action for women, girls, and young people in Bangladesh Slums and Mikindani Ward."
         image={IMG.workspace}
         stats={[
-          ["3", "Core environmental programs"],
+          ["5",    "Community programs"],
           ["Free", "Community participation"],
-          ["500+", "Seedlings planted to date"],
+          ["2019", "Operating since"],
         ]}
       />
       <section className="section pattern-band">
         <div className="mx-auto max-w-7xl px-6">
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {programs.map((p, i) => (
               <Reveal key={p.title} delay={i * 110}>
                 <Link
@@ -87,7 +105,7 @@ function ProgramsPage() {
                   <div className="aspect-[4/3] overflow-hidden">
                     <img
                       src={p.img}
-                      alt={p.title}
+                      alt={getProgramAltText(p.id)}
                       loading="lazy"
                       width={1024}
                       height={768}
@@ -125,8 +143,8 @@ function ProgramsPage() {
 
       <CtaBand
         eyebrow="Participate"
-        title="Join our conservation community"
-        body="Whether through volunteering, partnering, or community participation, there's a way to support coastal restoration."
+        title="Join our community programs"
+        body="Whether through volunteering, partnering, or community participation, there's a way to support our work in Mombasa."
         primary={{ to: "/contact", label: "Get involved" }}
         secondary={{ to: "/events", label: "Upcoming events" }}
       />
